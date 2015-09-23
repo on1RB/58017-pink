@@ -6,8 +6,127 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
+    <header class="page-header" role="banner">
+      <div class="page-header__inner">
+        <div class="page-header__wrapper">
+          <div class="page-header__intro">
+            <h1>Взгляните на жизнь иначе!</h1>
+            <nav class="page-nav" role="navigation">
+              <ul class="page-nav__list">
+                <li class="page-nav__logo-wrap">
+                  <a href="#">
+                    <img src="" alt="Pink">
+                  </a>
+                  <span class="page-nav__toggle"><i></i></span>
+                  <span class="page-nav__toggle-close"></span>
+                </li>
+                <li class="page-nav__item"><a href="#">Информация</a></li>
+                <li class="page-nav__item"><a href="#">Блог</a></li>
+                <li class="page-nav__item"><a href="#">Отзывы</a></li>
+                <li class="page-nav__item"><a href="#">Конкурс</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="app-download">
+            <a href="" class="app-download__button">Скачать приложение</a>
+            <div class="app-dowloand__list">
+              <div class="app-dowloand__item app-dowloand__item--mac"></div>
+              <div class="app-dowloand__item app-dowloand__item--android"></div>
+              <div class="app-dowloand__item app-dowloand__item--windows"></div>
+              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-main" role="main">
+      <section class="feature">
+        <header class="feature__header">
+          <h2 class="feature__promo">Устали от серости мегаполиса?</h2>
+          <h2 class="feature__promo">Нам есть, что вам предложить!</h2>
+        </header>
+       <div class="feature-list">
+         <div class="feature__item">
+           <h3 class="feature__heading">Поднимает настроение</h3>
+           <p class="feature__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+         </div>
+         <div class="feature__item">
+           <h3 class="feature__heading">Меняет мир вокруг</h3>
+           <p class="feature__description">Сделайте снимок и украсьте его смайликом или тестовой подписью, что усилить эффект</p>
+         </div>
+         <div class="feature__item">
+           <h3 class="feature__heading">Заводит новых друзей</h3>
+           <p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+         </div>
+         <div class="feature__img">
+           <img src="" alt="">
+         </div>
+       </div>
+      </section>
+      <section class="comment-slider">
+        <article class="comment__item">
+          <h2 class="comment__heading">Николай Петров</h2>
+          <p class="comment__description">"Это приложение перевернуло мой мир и позволило по-новому вглянуть на привычные серые вещи! А еще я познакомился со своей будующей женой в комменатриях к выложенной фотографии!"</p>
+        </article>
+        <!-- <article></article>
+        <article></article> -->
+        <div class="comment__pagination">
+          <input type="radio" id="comment-1" checked name="comment-toggle">
+          <input type="radio" id="comment-2" name="comment-toggle">
+          <input type="radio" id="comment-3" name="comment-toggle">
+          <div class="comment__toggles">
+            <label for="comment-1"></label>
+            <label for="comment-2"></label>
+            <label for="comment-3"></label>
+          </div>
+        </div>
+      </section>
+      <div class="order">
+        <div class="order__item">
+          <div class="order__header">
+            <p class="order__title">Стандарт</p>
+            <p class="order__price">3,99 USD</p>
+          </div>
+          <ul class="order__info">
+            <li class="order__feature">
+              <p class="order__content">Розовый фильтр</p>
+            </li>
+            <li class="order__feature">
+              <p class="order__content">Смайлики</p>
+            </li>
+            <li class="order__feature">
+              <p class="order__content">Комментарии</p>
+            </li>
+          </ul>
+        </div>
+        <div class="order__pagination">
+          <input type="radio" id="order-1" name="order-toggle">
+          <input type="radio" id="order-2" checked name="order-toggle">
+          <input type="radio" id="order-3" name="order-toggle">
+          <div class="order__toggles">
+            <label for="order-1"></label>
+            <label for="order-2"></label>
+            <label for="order-3"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <h4 class="page-footer__heading">Остались вопросы? Свяжитесь с нами!</h4>
+      <div class="page-footer__item">
+        <p class="page-footer__title">Звоните:</p>
+        <a href="+7(812)555-66-66" class="page-footer__info">+7 (812) 555-66-66</a>
+      </div>
+      <div class="page-footer__item">
+        <p class="page-footer__title">Пишите:</p>
+        <a href="mail@htmlacademy.ru" class="page-footer__info">mail@htmlacademy.ru</a>
+      </div>
+      <div class="page-footer__item">
+        <p class="page-footer__title">Приезжайте в гости:</p>
+        <p class="page-footer__info">ул. Большая Конюшенная, 19/8</p>
+      </div>
+      <div class="map"></div>
+    </footer>
 
     <!-- <script src="js/script.js"></script> -->
 
