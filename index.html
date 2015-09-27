@@ -3,123 +3,123 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
+
     <header class="page-header" role="banner">
       <div class="page-header__inner">
-        <div class="page-header__wrapper">
-          <div class="page-header__intro">
-            <h1>Взгляните на жизнь иначе!</h1>
-            <nav class="page-nav" role="navigation">
-              <ul class="page-nav__list">
-                <li class="page-nav__logo-wrap">
-                  <a href="#">
-                    <img src="" alt="Pink">
-                  </a>
-                  <span class="page-nav__toggle"><i></i></span>
-                  <span class="page-nav__toggle-close"></span>
-                </li>
-                <li class="page-nav__item"><a href="#">Информация</a></li>
-                <li class="page-nav__item"><a href="#">Блог</a></li>
-                <li class="page-nav__item"><a href="#">Отзывы</a></li>
-                <li class="page-nav__item"><a href="#">Конкурс</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="app-download">
-            <a href="" class="app-download__button">Скачать приложение</a>
-            <div class="app-dowloand__list">
+        <h1>Взгляните на жизнь иначе!</h1>
+        <a class="logo" href="#"><img src="" alt="Pink"></a>
+        <nav class="page-nav" role="navigation">
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a href="#">Информация</a></li>
+            <li class="page-nav__item"><a href="#">Блог</a></li>
+            <li class="page-nav__item"><a href="#">Отзывы</a></li>
+            <li class="page-nav__item"><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="" class="toggler" id="toggler"><span></span></a>
+        </nav>
+      </div>
+      <div class="app-download">
+        <a href="" class="btn-download">Скачать приложение</a>
+        <div class="app-dowloand__list">
+          <ul>
+            <li>
               <div class="app-dowloand__item app-dowloand__item--mac"></div>
+            </li>
+            <li>
               <div class="app-dowloand__item app-dowloand__item--android"></div>
+            </li>
+            <li>
               <div class="app-dowloand__item app-dowloand__item--windows"></div>
-              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </div>
-          </div>
+            </li>
+          </ul>
+          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
     </header>
-    <div class="page-main" role="main">
+
+    <main class="page-main" role="main">
       <section class="feature">
-        <header class="feature__header">
-          <h2 class="feature__promo">Устали от серости мегаполиса?</h2>
-          <h2 class="feature__promo">Нам есть, что вам предложить!</h2>
-        </header>
-       <div class="feature-list">
-         <div class="feature__item">
-           <h3 class="feature__heading">Поднимает настроение</h3>
-           <p class="feature__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-         </div>
-         <div class="feature__item">
-           <h3 class="feature__heading">Меняет мир вокруг</h3>
-           <p class="feature__description">Сделайте снимок и украсьте его смайликом или тестовой подписью, что усилить эффект</p>
-         </div>
-         <div class="feature__item">
-           <h3 class="feature__heading">Заводит новых друзей</h3>
-           <p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-         </div>
-         <div class="feature__img">
-           <img src="" alt="">
-         </div>
-       </div>
+        <h2 class="feature__header">
+          <span class="feature__promo">Устали от серости мегаполиса?</span>
+          <span class="feature__promo">Нам есть, что вам предложить!</span>
+        </h2>
+        <ul class="feature__list">
+          <li class="feature__item">
+            <h3 class="feature__heading">Поднимает настроение</h3>
+            <div class="feature__description"><p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p></div>
+          </li>
+          <li class="feature__item">
+            <h3 class="feature__heading">Меняет мир вокруг</h3>
+            <div class="feature__description"><p>Сделайте снимок и украсьте его смайликом или тестовой подписью, что усилить эффект</p></div>
+          </li>
+          <li class="feature__item">
+            <h3 class="feature__heading">Заводит новых друзей</h3>
+            <div class="feature__description"><p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p></div>
+          </li>
+          <li class="feature__img">
+            <img src="" alt="">
+          </li>
+        </ul>
       </section>
       <section class="comment-slider">
-        <article class="comment__item">
-          <h2 class="comment__heading">Николай Петров</h2>
-          <p class="comment__description">"Это приложение перевернуло мой мир и позволило по-новому вглянуть на привычные серые вещи! А еще я познакомился со своей будующей женой в комменатриях к выложенной фотографии!"</p>
-        </article>
-        <!-- <article></article>
-        <article></article> -->
-        <div class="comment__pagination">
-          <input type="radio" id="comment-1" checked name="comment-toggle">
-          <input type="radio" id="comment-2" name="comment-toggle">
-          <input type="radio" id="comment-3" name="comment-toggle">
-          <div class="comment__toggles">
-            <label for="comment-1"></label>
-            <label for="comment-2"></label>
-            <label for="comment-3"></label>
-          </div>
+        <div class="comment-slider__list">
+          <article class="comment-slider__item">
+            <h2 class="comment-slider__heading">Николай Петров</h2>
+            <p class="comment-slider__description">"Это приложение перевернуло мой мир и позволило по-новому вглянуть на привычные серые вещи! А еще я познакомился со своей будующей женой в комменатриях к выложенной фотографии!"</p>
+          </article>
+          <!-- <article></article>
+          <article></article> -->
+        </div>
+        <div class="index-pagination">
+          <span class="comment-slider__active"></span>
+          <span></span>
+          <span></span>
         </div>
       </section>
-      <div class="order">
-        <div class="order__item">
-          <div class="order__header">
-            <p class="order__title">Стандарт</p>
-            <p class="order__price">3,99 USD</p>
-          </div>
-          <ul class="order__info">
-            <li class="order__feature">
-              <p class="order__content">Розовый фильтр</p>
-            </li>
-            <li class="order__feature">
-              <p class="order__content">Смайлики</p>
-            </li>
-            <li class="order__feature">
-              <p class="order__content">Комментарии</p>
-            </li>
-          </ul>
+      <table class="order">
+        <tr class="order__item">
+          <td class="order__header">
+            <strong class="order__title">Стандарт</strong>
+            <span class="order__price">3,99 USD</span>
+          </td>
+        </tr>
+        <tr class="order__info">
+          <td class="order__feature">
+            <p class="order__content">Розовый фильтр</p>
+            <span>да</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="order__feature">
+            <p class="order__content">Смайлики</p>
+            <span>да</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="order__feature">
+            <p class="order__content">Комментарии</p>
+            <span>нет</span>
+          </td>
+        </tr>
+        <div class="index-pagination">
+          <span class="comment-slider__active"></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="order__pagination">
-          <input type="radio" id="order-1" name="order-toggle">
-          <input type="radio" id="order-2" checked name="order-toggle">
-          <input type="radio" id="order-3" name="order-toggle">
-          <div class="order__toggles">
-            <label for="order-1"></label>
-            <label for="order-2"></label>
-            <label for="order-3"></label>
-          </div>
-        </div>
-      </div>
-    </div>
+      </table>
+    </main>
+
     <footer class="page-footer">
-      <h4 class="page-footer__heading">Остались вопросы? Свяжитесь с нами!</h4>
+      <div class="page-footer__heading">Остались вопросы? Свяжитесь с нами!</div>
       <div class="page-footer__item">
         <p class="page-footer__title">Звоните:</p>
-        <a href="+7(812)555-66-66" class="page-footer__info">+7 (812) 555-66-66</a>
+        <a href="tel: +7(812)555-66-66" class="page-footer__info">+7 (812) 555-66-66</a>
       </div>
       <div class="page-footer__item">
         <p class="page-footer__title">Пишите:</p>
-        <a href="mail@htmlacademy.ru" class="page-footer__info">mail@htmlacademy.ru</a>
+        <a href="mailto: mail@htmlacademy.ru" class="page-footer__info">mail@htmlacademy.ru</a>
       </div>
       <div class="page-footer__item">
         <p class="page-footer__title">Приезжайте в гости:</p>
@@ -127,8 +127,5 @@
       </div>
       <div class="map"></div>
     </footer>
-
-    <!-- <script src="js/script.js"></script> -->
-
   </body>
 </html>

@@ -8,114 +8,168 @@
   <body>
     <header class="page-header" role="banner">
       <div class="page-header__inner">
-        <div class="page-header__wrapper">
-          <div class="page-header__intro">
-            <h1>Конкурс на самое бесбашенное путешествие с Пинк</h1>
-            <nav class="page-nav" role="navigation">
-              <ul class="page-nav__list">
-                <li class="page-nav__logo-wrap">
-                  <a href="#">
-                    <img src="" alt="Pink">
-                  </a>
-                  <span class="page-nav__toggle"><i></i></span>
-                  <span class="page-nav__toggle-close"></span>
-                </li>
-                <li class="page-nav__item"><a href="#">Информация</a></li>
-                <li class="page-nav__item"><a href="#">Блог</a></li>
-                <li class="page-nav__item"><a href="#">Отзывы</a></li>
-                <li class="page-nav__item"><a href="#">Конкурс</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <a class="logo" href="#"><img src="" alt="Pink"></a>
+        <nav class="page-nav" role="navigation">
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a href="#">Информация</a></li>
+            <li class="page-nav__item"><a href="#">Блог</a></li>
+            <li class="page-nav__item"><a href="#">Отзывы</a></li>
+            <li class="page-nav__item"><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="" class="toggler" id="toggler"><span></span></a>
+        </nav>
       </div>
     </header>
-    <main class="page-main" role="main">
-      <form class="main-form" action="/echo" method="post">
-        <div class="about-you">
-          <p class="about-you__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
-          <label for="user-name">Имя: *</label>
-          <input class="about-you__name" type="text" id="user-name" name="user-name" placeholder="Введите ваш имя" required>
-          <label for="user-surname">Фамилия: *</label>
-          <input class="about-you__surname" type="text" name="user-surname" id="user-surname"placeholder="Укажите фамилию" required>
-          <label for="user-patronymic">Отчесво:</label>
-          <input class="about-you__patronymic"type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
-        </div>
-        <div class="app-travel">
-          <p class="app-travel__text">С каким приложением путешествовали? *</p>
-          <input class="app-travel__btn-ios" type="radio" id="ios" name="ios" checked>
-          <label for="ios">Pink для iOS</label>
-          <input class="app-travel__btn" type="radio" id="android" name="android">
-          <label for="android">Pink на Android</label>
-          <input class="app-travel__btn" type="radio" id="windows-phone" name="windows-phone">
-          <label for="windows-phone">Windows Phone</label>
-        </div>
-        <div class="date-travel">
-          <p class="date-travel__text">Когда вы путешествовали? *</p>
-          <input type="date" name="date-travel" id="date-travel" placeholder="1 апреля 2015" required>
-          <label for="date-travel">Дата выезда</label>
-          <input class="btn-minus-day" type="button" value="-" id="btn-minus-day">
-          <input class="date-travel__duration" type="text" name="duration" id="duration" placeholder="10 дней">
-          <input class="btn-plus-day" type="button" value="+" id="btn-plus-day">
-          <label for="duration">Продолжительность</label>
-          <input class="date-travel__return-day" type="date" name="return-day" id="return-day" placeholder="1 апреля 2015" required>
-          <label for="return-day">Дата возвращения</label>
-        </div>
-        <div class="number-person">
-          <label for="duration">Количество попутчиков *</label>
-          <input class="btn-minus-person" type="button" value="-" id="btn-minus-person">
-          <input class="number-person__quantity" type="text" name="quantity" id="quantity" placeholder="2 чел">
-          <input class="btn-plus-person" type="button" value="+" id="btn-plus-person">
-        </div>
-        <div class="travel-person">
-          <label for="number-first">№</label>
-          <label for="name-first">Имя: *</label>
-          <input class="travel-person__number" type="number" name="number-first" id="number-first" placeholder="1" disabled>
-          <input class="travel-person__name" type="text" name="name-first" id="name-first" placeholder="Введите ваше имя" required>
-          <label for="nickname-first">Прозвище:</label>
-          <input class="travel-person__nickname" type="text" name="nickname-first" id="nickname-first" placeholder="Ну как же без этого!">
-          <label for="number-second">№</label>
-          <label for="name-second">Имя: *</label>
-          <input class="travel-person__number" type="number" name="number-second" id="number-second" placeholder="2" disabled>
-          <input class="travel-person__name" type="text" name="name-second" id="name-second" placeholder="Введите ваше имя" required>
-          <label for="nickname-second">Прозвище:</label>
-          <input class="travel-person__nickname" type="text" name="nickname-second" id="nickname-second" placeholder="Ну как же без этого!">
-        </div>
-        <div class="achievements">
-          <p class="achievements__heading">Ваши безбашенные достижения в путешествии</p>
-          <input class="achievements__picture-shark" type="checkbox" name="picture-shark" id="picture-shark" checked>
-          <label for="picture-shark">Сделал селфи с акулой</label>
-          <input class="achievements__burned-beach" type="checkbox" name="burned-beach" id="burned-beach" checked>
-          <label for="burned-beach">Обгорел на пляже</label>
-          <input class="achievements__Chuck-saw" type="checkbox" name="Chuck-saw" id="Chuck-saw">
-          <label for="Chuck-saw">Видел Чака Норриса</label>
-          <input class="achievements__purchase" type="checkbox" name="purchase" id="purchase">
-          <label for="purchase">Накупил сувениров</label>
-          <input class="achievements__pinned-tower" type="checkbox" name="pinned-tower" id="pinned-tower" checked>
-          <label for="pinned-tower">Удержал башню</label>
-          <input class="achievements__defeated-hotel" type="checkbox" name="defeated-hotel" id="defeated-hotel">
-          <label for="defeated-hotel">Разгромил отель</label>
-        </div>
-        <div class="your-photos">
-          <p class="your-photos__text">Ваши фотографии из поездки *</p>
-          <input class="your-photos__download" type="file" name="download" id="download" required>
-        </div>
-        <div class="photo">
-          <img class="photo__image photo__image--1" src="#" alt="img-1">
-          <img class="photo__image photo__image--2" src="#" alt="img-2">
-          <img class="photo__image photo__image--3" src="#" alt="img-3">
-          <img class="photo__image photo__image--4" src="#" alt="img-4">
-          <img class="photo__image photo__image--5" src="#" alt="img-5">
-          <img class="photo__image photo__image--6" src="#" alt="img-6">
-          <img class="photo__image photo__image--7" src="#" alt="img-7">
-          <img class="photo__image photo__image--8" src="#" alt="img-8">
-        </div>
-        <div class="send-form">
-          <button class="send-form__btn" type="submit">Отправить форму</button>
-          <p class="send-form__text">* - Обязательные поля</p>
-        </div>
-      </form>
-    </main>
+
+    <form class="main-form" action="/echo" method="post" role="main">
+      <fieldset class="main-form__about">
+        <p class="main-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        <label class="main-form__name">
+          <span>Имя: *</span>
+          <input type="text" name="" placeholder="Введите ваш имя" required>
+        </label>
+        <label class="main-form__surname">
+          <span>Фамилия: *</span>
+          <input type="text" name="" placeholder="Укажите фамилию" required>
+        </label>
+        <label class="main-form__patronymic">
+          <span>Отчесво:</span>
+          <input type="text" name="" placeholder="Ну и отчество тоже">
+        </label>
+      </fieldset>
+      <fieldset class="main-form__app-travel main-form__app-travel--bg">
+        <p class="main-form__text main-form__text--font">С каким приложением путешествовали? *</p>
+        <label class="main-form__btn-ios">
+          <input type="radio" name="" checked>
+          <span>Pink для iOS</span></label>
+        <label class="main-form__btn-android">
+          <input type="radio" name="">
+          <span>Pink на Android</span>
+        </label>
+        <label class="main-form__btn-windows">
+          <input type="radio" name="">
+          <span>Windows Phone</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__date-travel">
+        <p class="main-form__text main-form__text--font">Когда вы путешествовали? *</p>
+        <label class="main-form__date">
+          <input type="date" name="" placeholder="1 апреля 2015" required>
+          <span>Дата выезда</span>
+        </label>
+        <label class="duration">
+          <span class="duration__plus"></span>
+          <input class="duration__travel" type="text" name="" value="10 дней">
+          <span class="duration__minus"></span>
+          <span>Продолжительность</span>
+        </label>
+        <label class="main-form__return-day">
+          <input type="date" name="" placeholder="1 апреля 2015" required>
+          <span>Дата возвращения</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__person">
+        <label class="duration">
+          <span class="duration__plus"></span>
+          <input class="duration__travel" type="text" name="" value="2 чел">
+          <span class="duration__minus"></span>
+          <span>Количество попутчиков *</span>
+        </label>
+        <ul>
+          <li>
+            <label class="main-form__travel-person">
+              <span>Имя: *</span>
+              <input type="text" name="" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="main-form__travel-nickname">
+              <span>Прозвище:</span>
+              <input type="text" name="" placeholder="Ну как же без этого!">
+            </label>
+          </li>
+          <li>
+            <label class="main-form__travel-person">
+              <span>Имя: *</span>
+              <input type="text" name="" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="main-form__travel-nickname">
+              <span>Прозвище:</span>
+              <input type="text" name="" placeholder="Ну как же без этого!">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="main-form__achievements">
+        <p class="main-form__text">Ваши безбашенные достижения в путешествии</p>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="" checked>
+          <span>Сделал селфи с акулой</span>
+        </label>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="" checked>
+          <span>Обгорел на пляже</span>
+        </label>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="">
+          <span>Видел Чака Норриса</span>
+        </label>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="">
+          <span>Накупил сувениров</span>
+        </label>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="" checked>
+          <span>Удержал башню</span>
+        </label>
+        <label class="main-form__checkbox">
+          <input type="checkbox" name="">
+          <span>Разгромил отель</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__photos">
+        <p class="main-form__text">Ваши фотографии из поездки *</p>
+        <input class="main-form__download" type="file" name="download" id="download" required>
+        <ul class="main-form__photos-list">
+          <li>
+            <img class="main-form__photo-item-1" src="#" alt="img-1">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-2" src="#" alt="img-2">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-3" src="#" alt="img-3">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-4" src="#" alt="img-4">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-5" src="#" alt="img-5">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-6" src="#" alt="img-6">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-7" src="#" alt="img-7">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li>
+            <img class="main-form__photo-item-8" src="#" alt="img-8">
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="main-form__submit">
+        <button class="btn" type="submit">Отправить форму</button>
+        <p class="send-form__text">* - Обязательные поля</p>
+      </fieldset>
+    </form>
+
     <footer class="page-footer">
       <div class="page-footer__logo">
         <a class="page-footer__glasses" href="#">
