@@ -23,143 +23,152 @@
     </header>
 
     <form class="main-form" action="/echo" method="post" role="main">
-      <fieldset class="main-form__about">
-        <p class="main-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
-        <label class="main-form__name">
-          <span>Имя: *</span>
+      <fieldset class="main-form__fieldset">
+        <p class="main-form__text main-form__text--color">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        <label class="field-text">
+          <span class="field-text__name">Имя: *</span>
           <input type="text" name="" placeholder="Введите ваш имя" required>
         </label>
-        <label class="main-form__surname">
-          <span>Фамилия: *</span>
+        <label class="field-text">
+          <span class="field-text__name">Фамилия: *</span>
           <input type="text" name="" placeholder="Укажите фамилию" required>
         </label>
-        <label class="main-form__patronymic">
-          <span>Отчесво:</span>
+        <label class="field-text">
+          <span class="field-text__name">Отчесво:</span>
           <input type="text" name="" placeholder="Ну и отчество тоже">
         </label>
       </fieldset>
-      <fieldset class="main-form__app-travel main-form__app-travel--bg">
-        <p class="main-form__text main-form__text--font">С каким приложением путешествовали? *</p>
-        <label class="main-form__btn-ios">
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
+        <p class="main-form__text">С каким приложением путешествовали? *</p>
+        <label class="field-radio">
           <input type="radio" name="" checked>
-          <span>Pink для iOS</span></label>
-        <label class="main-form__btn-android">
-          <input type="radio" name="">
-          <span>Pink на Android</span>
+          <span class="field-radio__name">Pink для iOS</span>
         </label>
-        <label class="main-form__btn-windows">
+        <label class="field-radio">
           <input type="radio" name="">
-          <span>Windows Phone</span>
+          <span class="field-radio__name">Pink на Android</span>
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="">
+          <span class="field-radio__name">Windows Phone</span>
         </label>
       </fieldset>
-      <fieldset class="main-form__date-travel">
-        <p class="main-form__text main-form__text--font">Когда вы путешествовали? *</p>
-        <label class="main-form__date">
+      <fieldset class="main-form__fieldset">
+        <p class="main-form__text">Когда вы путешествовали? *</p>
+        <label class="field-text">
           <input type="date" name="" placeholder="1 апреля 2015" required>
-          <span>Дата выезда</span>
+          <span class="field-text__name">Дата выезда</span>
         </label>
-        <label class="duration">
-          <span class="duration__plus"></span>
-          <input class="duration__travel" type="text" name="" value="10 дней">
-          <span class="duration__minus"></span>
-          <span>Продолжительность</span>
+        <label class="field-text field-text--counter">
+          <span class="field-text__plus"></span>
+          <input class="field-text__travel" type="text" name="" value="10 дней">
+          <span class="field-text__minus"></span>
+          <span class="field-text__name">Продолжительность</span>
         </label>
-        <label class="main-form__return-day">
+        <label class="field-text">
           <input type="date" name="" placeholder="1 апреля 2015" required>
-          <span>Дата возвращения</span>
+          <span class="field-text__name">Дата возвращения</span>
         </label>
       </fieldset>
-      <fieldset class="main-form__person">
-        <label class="duration">
-          <span class="duration__plus"></span>
-          <input class="duration__travel" type="text" name="" value="2 чел">
-          <span class="duration__minus"></span>
-          <span>Количество попутчиков *</span>
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
+        <label class="field-text field-text--counter">
+          <span class="field-text__plus"></span>
+          <input class="field-text__travel" type="text" name="" value="2 чел">
+          <span class="field-text__minus"></span>
+          <span class="field-text__name">Количество попутчиков *</span>
         </label>
-        <ul>
+        <ul class="main-form__counter">
           <li>
-            <label class="main-form__travel-person">
-              <span>Имя: *</span>
+            <label class="field-text">
+              <span class="field-text__name">Имя: *</span>
               <input type="text" name="" placeholder="Введите ваше имя" required>
             </label>
-            <label class="main-form__travel-nickname">
-              <span>Прозвище:</span>
+            <label class="field-text">
+              <span class="field-text__name">Прозвище:</span>
               <input type="text" name="" placeholder="Ну как же без этого!">
             </label>
           </li>
           <li>
-            <label class="main-form__travel-person">
-              <span>Имя: *</span>
+            <label class="field-text">
+              <span class="field-text__name">Имя: *</span>
               <input type="text" name="" placeholder="Введите ваше имя" required>
             </label>
-            <label class="main-form__travel-nickname">
-              <span>Прозвище:</span>
+            <label class="field-text">
+              <span class="field-text__name">Прозвище:</span>
               <input type="text" name="" placeholder="Ну как же без этого!">
             </label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="main-form__achievements">
+      <fieldset class="main-form__fieldset">
         <p class="main-form__text">Ваши безбашенные достижения в путешествии</p>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="" checked>
-          <span>Сделал селфи с акулой</span>
+          <span class="field-checkbox__name">Сделал селфи с акулой</span>
         </label>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="" checked>
-          <span>Обгорел на пляже</span>
+          <span class="field-checkbox__name">Обгорел на пляже</span>
         </label>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="">
-          <span>Видел Чака Норриса</span>
+          <span class="field-checkbox__name">Видел Чака Норриса</span>
         </label>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="">
-          <span>Накупил сувениров</span>
+          <span class="field-checkbox__name">Накупил сувениров</span>
         </label>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="" checked>
-          <span>Удержал башню</span>
+          <span class="field-checkbox__name">Удержал башню</span>
         </label>
-        <label class="main-form__checkbox">
+        <label class="field-checkbox">
           <input type="checkbox" name="">
-          <span>Разгромил отель</span>
+          <span class="field-checkbox__name">Разгромил отель</span>
         </label>
       </fieldset>
-      <fieldset class="main-form__photos">
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
         <p class="main-form__text">Ваши фотографии из поездки *</p>
         <input class="main-form__download" type="file" name="download" id="download" required>
         <ul class="main-form__photos-list">
-          <li>
-            <img class="main-form__photo-item-1" src="#" alt="img-1">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-1.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-2" src="#" alt="img-2">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-2.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-3" src="#" alt="img-3">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-3.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-4" src="#" alt="img-4">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-4.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-5" src="#" alt="img-5">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-5.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-6" src="#" alt="img-6">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-6.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-7" src="#" alt="img-7">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-7.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
-          <li>
-            <img class="main-form__photo-item-8" src="#" alt="img-8">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-8.JPG</span>
             <span class="main-form__photo-remove-link"></span>
           </li>
         </ul>

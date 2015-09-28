@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: pink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
 
@@ -22,17 +24,11 @@
       </div>
       <div class="app-download">
         <a href="" class="btn-download">Скачать приложение</a>
-        <div class="app-dowloand__list">
-          <ul>
-            <li>
-              <div class="app-dowloand__item app-dowloand__item--mac"></div>
-            </li>
-            <li>
-              <div class="app-dowloand__item app-dowloand__item--android"></div>
-            </li>
-            <li>
-              <div class="app-dowloand__item app-dowloand__item--windows"></div>
-            </li>
+        <div class="app-download__apps">
+          <ul class="app-download__list">
+            <li class="app-download__item app-download__item--mac"></li>
+            <li class="app-download__item app-download__item--android"></li>
+            <li class="app-download__item app-download__item--windows"></li>
           </ul>
           <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
@@ -42,8 +38,8 @@
     <main class="page-main" role="main">
       <section class="feature">
         <h2 class="feature__header">
-          <span class="feature__promo">Устали от серости мегаполиса?</span>
-          <span class="feature__promo">Нам есть, что вам предложить!</span>
+          <span class="feature__header-tags">Устали от серости мегаполиса?</span>
+          <span class="feature__header-tags">Нам есть, что вам предложить!</span>
         </h2>
         <ul class="feature__list">
           <li class="feature__item">
@@ -63,17 +59,17 @@
           </li>
         </ul>
       </section>
-      <section class="comment-slider">
-        <div class="comment-slider__list">
-          <article class="comment-slider__item">
-            <h2 class="comment-slider__heading">Николай Петров</h2>
-            <p class="comment-slider__description">"Это приложение перевернуло мой мир и позволило по-новому вглянуть на привычные серые вещи! А еще я познакомился со своей будующей женой в комменатриях к выложенной фотографии!"</p>
-          </article>
+      <section class="slider">
+        <div class="slider__list">
+          <blockquote class="slider__item">
+            <footer class="slider__heading">Николай Петров</footer>
+            <p>"Это приложение перевернуло мой мир и позволило по-новому вглянуть на привычные серые вещи! А еще я познакомился со своей будующей женой в комменатриях к выложенной фотографии!"</p>
+          </blockquote>
           <!-- <article></article>
           <article></article> -->
         </div>
-        <div class="index-pagination">
-          <span class="comment-slider__active"></span>
+        <div class="slider-pagination">
+          <span class="slider-pagination__active"></span>
           <span></span>
           <span></span>
         </div>
@@ -85,26 +81,26 @@
             <span class="order__price">3,99 USD</span>
           </td>
         </tr>
-        <tr class="order__info">
+        <tr class="order__item">
           <td class="order__feature">
             <p class="order__content">Розовый фильтр</p>
-            <span>да</span>
+            <span class="order__check">да</span>
           </td>
         </tr>
-        <tr>
+        <tr class="order__item">
           <td class="order__feature">
             <p class="order__content">Смайлики</p>
-            <span>да</span>
+            <span class="order__check">да</span>
           </td>
         </tr>
-        <tr>
+        <tr class="order__item">
           <td class="order__feature">
             <p class="order__content">Комментарии</p>
-            <span>нет</span>
+            <span class="order__cross">нет</span>
           </td>
         </tr>
-        <div class="index-pagination">
-          <span class="comment-slider__active"></span>
+        <div class="slider-pagination">
+          <span class="slider-pagination__active"></span>
           <span></span>
           <span></span>
         </div>
