@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: pink</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <div class="page-header__inner">
+        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <a class="logo" href="#"><img src="" alt="Pink"></a>
+        <nav class="page-nav" role="navigation">
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a href="#">Информация</a></li>
+            <li class="page-nav__item"><a href="#">Блог</a></li>
+            <li class="page-nav__item"><a href="#">Отзывы</a></li>
+            <li class="page-nav__item"><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="" class="toggler" id="toggler"><span></span></a>
+        </nav>
+      </div>
+    </header>
+
+    <form class="main-form" action="/echo" method="post" role="main">
+      <fieldset class="main-form__fieldset">
+        <p class="main-form__text main-form__text--color">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        <label class="field-text">
+          <span class="field-text__name">Имя: *</span>
+          <input type="text" name="" placeholder="Введите ваш имя" required>
+        </label>
+        <label class="field-text">
+          <span class="field-text__name">Фамилия: *</span>
+          <input type="text" name="" placeholder="Укажите фамилию" required>
+        </label>
+        <label class="field-text">
+          <span class="field-text__name">Отчесво:</span>
+          <input type="text" name="" placeholder="Ну и отчество тоже">
+        </label>
+      </fieldset>
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
+        <p class="main-form__text">С каким приложением путешествовали? *</p>
+        <label class="field-radio">
+          <input type="radio" name="" checked>
+          <span class="field-radio__name">Pink для iOS</span>
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="">
+          <span class="field-radio__name">Pink на Android</span>
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="">
+          <span class="field-radio__name">Windows Phone</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__fieldset">
+        <p class="main-form__text">Когда вы путешествовали? *</p>
+        <label class="field-text">
+          <input type="date" name="" placeholder="1 апреля 2015" required>
+          <span class="field-text__name">Дата выезда</span>
+        </label>
+        <label class="field-text field-text--counter">
+          <span class="field-text__plus"></span>
+          <input class="field-text__travel" type="text" name="" value="10 дней">
+          <span class="field-text__minus"></span>
+          <span class="field-text__name">Продолжительность</span>
+        </label>
+        <label class="field-text">
+          <input type="date" name="" placeholder="1 апреля 2015" required>
+          <span class="field-text__name">Дата возвращения</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
+        <label class="field-text field-text--counter">
+          <span class="field-text__plus"></span>
+          <input class="field-text__travel" type="text" name="" value="2 чел">
+          <span class="field-text__minus"></span>
+          <span class="field-text__name">Количество попутчиков *</span>
+        </label>
+        <ul class="main-form__counter">
+          <li>
+            <label class="field-text">
+              <span class="field-text__name">Имя: *</span>
+              <input type="text" name="" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Прозвище:</span>
+              <input type="text" name="" placeholder="Ну как же без этого!">
+            </label>
+          </li>
+          <li>
+            <label class="field-text">
+              <span class="field-text__name">Имя: *</span>
+              <input type="text" name="" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Прозвище:</span>
+              <input type="text" name="" placeholder="Ну как же без этого!">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="main-form__fieldset">
+        <p class="main-form__text">Ваши безбашенные достижения в путешествии</p>
+        <label class="field-checkbox">
+          <input type="checkbox" name="" checked>
+          <span class="field-checkbox__name">Сделал селфи с акулой</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" name="" checked>
+          <span class="field-checkbox__name">Обгорел на пляже</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" name="">
+          <span class="field-checkbox__name">Видел Чака Норриса</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" name="">
+          <span class="field-checkbox__name">Накупил сувениров</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" name="" checked>
+          <span class="field-checkbox__name">Удержал башню</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" name="">
+          <span class="field-checkbox__name">Разгромил отель</span>
+        </label>
+      </fieldset>
+      <fieldset class="main-form__fieldset main-form__fieldset--bg-gray">
+        <p class="main-form__text">Ваши фотографии из поездки *</p>
+        <input class="main-form__download" type="file" name="download" id="download" required>
+        <ul class="main-form__photos-list">
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-1.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-2.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-3.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-4.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-5.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-6.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-7.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+          <li class="main-form__photos-list-item">
+            <img src="#" alt="">
+            <span class="main-form__name-img">IMG-8.JPG</span>
+            <span class="main-form__photo-remove-link"></span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="main-form__submit">
+        <button class="btn" type="submit">Отправить форму</button>
+        <p class="send-form__text">* - Обязательные поля</p>
+      </fieldset>
+    </form>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="page-footer__glasses" href="#">
+          <img src="#" alt="">
+        </a>
+        <a class="page-footer__pink" href="#">
+          <img src="#" alt="">
+        </a>
+      </div>
+      <div class="page-footer__social-list">
+        <a href="#" class="page-footer__item page-footer__item--twitter"></a>
+        <a href="#" class="page-footer__item page-footer__item--facebook"></a>
+        <a href="#" class="page-footer__item page-footer__item--play"></a>
+      </div>
+      <div class="developed">
+        Разработано
+        <a href="#">
+          <img src="#" alt="">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
