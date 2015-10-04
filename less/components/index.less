@@ -1,22 +1,26 @@
 .page-header {
   text-align: center;
   position: relative;
+  background: url(../img/header-bg.jpg) no-repeat scroll 50% -37%;
 
   &__inner {
     padding: 0 20px;
-    background: url(../img/header-bg.jpg) no-repeat scroll 50% 75%;
     margin: 0 auto;
     height: 460px;
+    overflow: hidden;
+
+    &--img-hand {
+      background: url(../img/hand.png) no-repeat scroll 50% 120%;
+    }
   }
 
   &__name {
     margin: 0;
     padding: 0;
     padding-top: 90px;
-    font-size: @font-size--24;
-    line-height: @line-height--auto;
-    font-weight: @font-weight--light;
-    font-style: normal;
+    font-size: @font-size--h1;
+    line-height: 1.2;
+    font-weight: 300;
     color: @white;
   }
 }
@@ -48,22 +52,19 @@
   width: 100%;
 
   &__list {
-    .ul-list();
+    margin: 0;
+    padding: 0;
+    list-style: none;
     text-align: center;
     background: @gray-blue--20;
   }
 
   &__item {
     display: none;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15);
 
     &:first-child {
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 1);
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15);
     }
 
     &:last-child {
@@ -74,9 +75,8 @@
       display: block;
       color: @white;
       text-decoration: none;
-      font-size: @font-size--18;
-      line-height: @line-height--32;
-      font-weight: @font-weight--bold;
+      font-size: 18px;
+      font-weight: 700;
       font-style: bold;
       padding: 18px 0;
       min-height: 65px;
@@ -154,13 +154,15 @@
   margin-bottom: 45px;
 
   &__apps {
-    line-height: @line-height--24;
-    font-weight: @font-weight--light;
+    line-height: 1.71;
+    font-weight: 300;
     color: @white;
   }
 
   &__list {
-    .ul-list();
+    list-style: none;
+    padding: 0;
+    margin: 0;
     padding: 0 35px;
     margin-bottom: 25px;
   }
@@ -201,9 +203,9 @@
   text-decoration: none;
   color: @white;
   text-align: center;
-  font-size: @font-size--18;
-  line-height: @line-height--18;
-  font-weight: @font-weight--bold;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
   border: 3px solid #fff;
   border-radius: 25px;
   height: 55px;
@@ -218,10 +220,10 @@
   margin-bottom: 48px;
 
   &__header {
-    font-size: @font-size--24;
-    line-height: @line-height--auto;
+    font-size: 24px;
+    line-height: 1.2;
     color: @gray-blue--20;
-    font-weight: @font-weight--light;
+    font-weight: 300;
     text-align: center;
     padding: 0 20px;
     margin-bottom: 115px;
@@ -233,7 +235,9 @@
   }
 
   &__list {
-    .ul-list();
+    padding: 0;
+    margin: 0;
+    list-style: none;
     position: relative;
     background: #f2f2f2;
 
@@ -256,17 +260,17 @@
 
   &__heading {
     color: @gray;
-    font-size: @font-size--18;
-    line-height: @line-height--24;
-    font-weight: @font-weight--bold;
+    font-size: @font-size--h3;
+    line-height: 1.33;
+    font-weight: 700;
     margin-bottom: 18px;
   }
 
   &__description {
     color: @gray-blue--20;
-    font-size: @font-size--14;
-    line-height: @line-height--24;
-    font-weight: @font-weight--normal;
+    font-size: 14px;
+    line-height: 1.71;
+    font-weight: 400;
   }
 
   &__img {
@@ -287,10 +291,10 @@
   &__item {
     display: flex;
     flex-direction: column;
-    font-size: @font-size--14;
-    line-height: @line-height--30;
+    font-size: 14px;
+    line-height: 2.14;
     color: @gray-blue--20;
-    font-weight: @font-weight--normal;
+    font-weight: 400;
     margin: 0 auto;
     margin-bottom: 35px;
 
@@ -301,10 +305,10 @@
 
   &__heading {
     order: 1;
-    font-size: @font-size--18;
-    line-height: @line-height--30;
+    font-size: 18px;
+    line-height: 1.67;
     color: @gray;
-    font-weight: @font-weight--bold;
+    font-weight: 700;
   }
 
   .slider-pagination {
@@ -385,8 +389,8 @@
   &__item {
     position: relative;
     padding: 0 20px;
-    border-left: 2px solid @table-border;
-    border-right: 2px solid @table-border;
+    border-left: 2px solid @border;
+    border-right: 2px solid @border;
   }
 
   &__header {
@@ -410,26 +414,26 @@
 
   &__title {
     display: block;
-    font-size: @font-size--18;
-    line-height: @line-height--30;
-    font-weight: @font-weight--bold;
+    font-size: 18px;
+    line-height: 1.67;
+    font-weight: 400;
   }
 
   &__price {
-    font-size: @font-size--24;
-    line-height: @line-height--30;
-    font-weight: @font-weight--light;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 300;
   }
 
   &__feature {
     position: relative;
-    border-bottom: 2px solid @table-border;
+    border-bottom: 2px solid @border;
     padding: 17px 20px;
   }
 
   &__content {
-    font-size: @font-size--14;
-    line-height: @line-height--30;
+    font-size: 14px;
+    line-height: 2.14;
     color: @gray-blue--20;
     text-transform: uppercase;
   }
@@ -476,24 +480,13 @@
 }
 
 .page-footer {
-  position: relative;
   text-align: center;
-
-  &:after {
-    content: '';
-    position: absolute;
-    height: 75px;
-    width: 100%;
-    top: 447px;
-    left: 0;
-    background: url(../img/footer-mask.png) no-repeat 50% 0;
-  }
 
   &__heading {
     padding: 0 20px;
-    font-size: @font-size--24;
-    line-height: @line-height--auto;
-    font-weight: @font-weight--light;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
     margin-bottom: 45px;
     color: @gray-blue--20;
   }
@@ -504,24 +497,35 @@
   }
 
   &__title {
-    font-size: @font-size--18;
-    line-height: @line-height--auto;
-    font-weight: @font-weight--bold;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
     margin-bottom: 15px;
     color: @gray-blue--20;
   }
 
   &__info {
     text-decoration: none;
-    font-size: @font-size--24;
-    line-height: @line-height--auto;
-    font-weight: @font-weight--light;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
     color: @pink;
   }
 }
 
 .map {
+  position: relative;
   width: 100%;
   height: 200px;
   background: url(../img/map.jpg) no-repeat 50% 98%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    top: -33px;
+    left: 0;
+    background: url(../img/footer-mask.png) no-repeat 50% 0;
+  }
 }
