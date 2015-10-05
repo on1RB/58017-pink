@@ -1,0 +1,131 @@
+.main-form {
+  margin: 0 auto;
+
+  &__fieldset {
+    border: none;
+    padding: 0 20px;
+    margin: 0;
+
+    &--bg-gray {
+      background: @bg-gray;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: @pink;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 45px;
+
+    &--color {
+      color: @gray-blue--20;
+      text-transform: none;
+    }
+  }
+
+  &__counter {
+    padding-left: 61px;
+    counter-reset: heading;
+
+    &--number {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        counter-increment: heading;
+        content: '' counter(heading);
+        text-align: center;
+        padding-top: 19px;
+        font-size: 18px;
+        line-height: 120%;
+        top: 31px;
+        left: -59px;
+        width: 61px;
+        height: 62.6px;
+        border: 2px solid @border-gray;
+        color: @gray-blue--20;
+      }
+
+      &:after {
+        position: absolute;
+        content: '№';
+        top: 0;
+        left: -35px;
+        line-height: 1.29;
+        color: @pink;
+      }
+    }
+  }
+
+  &__photos-list {
+    padding-top: 35px;
+    border-top: 2px solid @border-gray;
+    font-size: 0;
+  }
+
+  &__photos-list-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 39px;
+    position: relative;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    img {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__photo-remove-link {
+    position: absolute;
+    top: -16px;
+    left: 50px;
+    width: 33px;
+    height: 33px;
+    border: 2px solid @border-gray;
+    background: @white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 7px;
+      width: 14px;
+      height: 2px;
+      background: #c1c1c1;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__name-img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+    color: @gray-blue--20;
+    margin-bottom: 23px;
+  }
+
+  &__submit {
+    border: none;
+    padding: 0 20px;
+    margin: 0;
+    text-align: center;
+  }
+}

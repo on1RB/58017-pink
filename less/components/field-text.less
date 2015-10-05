@@ -1,0 +1,138 @@
+.field-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    display: block;
+    font-size: 14px;
+    line-height: 1.29;
+    color: @pink;
+    font-weight: 400;
+    padding-left: 24px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+
+    &--text-center {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+
+    &--position {
+      padding-top: 50px;
+      margin-bottom: 45px;
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-family: @font-family;
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: 400;
+    padding: 20px 21px;
+    padding-bottom: 17px;
+    border: 2px solid @border-gray;
+    margin-bottom: 24px;
+    &::-webkit-input-placeholder { color: @gray-blue--20;; opacity: 1; }
+    &::-moz-placeholder { color: @gray-blue--20;; opacity: 1; }
+    &:-moz-placeholder { color: @gray-blue--20;; opacity: 1; }
+    &:-ms-input-placeholder { color: @gray-blue--20;; opacity: 1; }
+  }
+
+  input[type="date"] {
+    margin-bottom: 16px;
+  }
+
+  &--counter {
+    position: relative;
+
+    input {
+      padding-left: 59px;
+      padding-right: 59px;
+    }
+  }
+
+  &--border {
+    padding-bottom: 24px;
+    border-bottom: 2px solid @border-gray;
+    margin-bottom: 38px;
+  }
+
+  &__travel {
+    text-align: center;
+  }
+
+  &__plus {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 61px;
+    height: 62.6px;
+    cursor: pointer;
+    border-left: 2px solid @border-gray;
+
+    &--position {
+      top: 113px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 19px;
+      right: 29px;
+      height: 27px;
+      width: 3px;
+      background: @gray-blue--20;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 31px;
+      right: 17px;
+      width: 27px;
+      height: 3px;
+      background: @gray-blue--20;
+    }
+  }
+
+  &__minus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 61px;
+    height: 62.6px;
+    cursor: pointer;
+    border-right: 2px solid @border-gray;
+
+    &--position {
+      top: 113px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 31px;
+      left: 17px;
+      width: 27px;
+      height: 3px;
+      background: @gray-blue--20;
+    }
+  }
+
+  &--input-bg {
+
+    input {
+      background: @bg-gray;
+    }
+  }
+}

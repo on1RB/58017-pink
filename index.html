@@ -2,18 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet" media="screen">
+    <title>HTML Academy: pink</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header" role="banner">
-      <div class="page-header__inner">
-        <h1>Взгляните на жизнь иначе!</h1>
-        <a class="logo" href="#"><img src="" alt="Pink"></a>
+      <div class="page-header__inner page-header__inner--img-hand">
+        <h1 class="page-header__name">Взгляните на жизнь иначе!</h1>
+        <a class="logo" href="#"><img src="img/logo-pink.png" alt="Pink" width="74" height="23"></a>
         <nav class="page-nav" role="navigation">
           <ul class="page-nav__list">
+            <li class="page-nav__item"><a href=""></a></li>
             <li class="page-nav__item"><a href="#">Информация</a></li>
             <li class="page-nav__item"><a href="#">Блог</a></li>
             <li class="page-nav__item"><a href="#">Отзывы</a></li>
@@ -55,7 +57,7 @@
             <div class="feature__description"><p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p></div>
           </li>
           <li class="feature__img">
-            <img src="" alt="">
+            <img src="img/mobile.png" alt="">
           </li>
         </ul>
       </section>
@@ -69,42 +71,45 @@
           <article></article> -->
         </div>
         <div class="slider-pagination">
-          <span class="slider-pagination__active"></span>
-          <span></span>
-          <span></span>
+          <span class="slider-pagination__item slider-pagination__item--active"></span>
+          <span class="slider-pagination__item"></span>
+          <span class="slider-pagination__item"></span>
         </div>
       </section>
-      <table class="order">
-        <tr class="order__item">
-          <td class="order__header">
-            <strong class="order__title">Стандарт</strong>
-            <span class="order__price">3,99 USD</span>
-          </td>
-        </tr>
-        <tr class="order__item">
-          <td class="order__feature">
-            <p class="order__content">Розовый фильтр</p>
-            <span class="order__check">да</span>
-          </td>
-        </tr>
-        <tr class="order__item">
-          <td class="order__feature">
-            <p class="order__content">Смайлики</p>
-            <span class="order__check">да</span>
-          </td>
-        </tr>
-        <tr class="order__item">
-          <td class="order__feature">
-            <p class="order__content">Комментарии</p>
-            <span class="order__cross">нет</span>
-          </td>
-        </tr>
+      <div class="table">
+        <table class="order">
+          <tr class="order__item">
+            <td class="order__header">
+              <span class="order__flag">хит</span>
+              <strong class="order__title">Стандарт</strong>
+              <span class="order__price">3,99 USD</span>
+            </td>
+          </tr>
+          <tr class="order__item">
+            <td class="order__feature">
+              <span class="order__content">Розовый фильтр</span>
+              <span class="order__check">да</span>
+            </td>
+          </tr>
+          <tr class="order__item">
+            <td class="order__feature">
+              <span class="order__content">Смайлики</span>
+              <span class="order__check">да</span>
+            </td>
+          </tr>
+          <tr class="order__item">
+            <td class="order__feature">
+              <span class="order__content">Комментарии</span>
+              <span class="order__cross">нет</span>
+            </td>
+          </tr>
+        </table>
         <div class="slider-pagination">
-          <span class="slider-pagination__active"></span>
-          <span></span>
-          <span></span>
+          <span class="slider-pagination__item"></span>
+          <span class="slider-pagination__item slider-pagination__item--active"></span>
+          <span class="slider-pagination__item"></span>
         </div>
-      </table>
+      </div>
     </main>
 
     <footer class="page-footer">
@@ -114,14 +119,14 @@
         <a href="tel: +7(812)555-66-66" class="page-footer__info">+7 (812) 555-66-66</a>
       </div>
       <div class="page-footer__item">
-        <p class="page-footer__title">Пишите:</p>
+        <span class="page-footer__title">Пишите:</span>
         <a href="mailto: mail@htmlacademy.ru" class="page-footer__info">mail@htmlacademy.ru</a>
       </div>
       <div class="page-footer__item">
-        <p class="page-footer__title">Приезжайте в гости:</p>
-        <p class="page-footer__info">ул. Большая Конюшенная, 19/8</p>
+        <span class="page-footer__title">Приезжайте в гости:</span>
+        <span class="page-footer__info">ул. Большая Конюшенная, 19/8</span>
       </div>
-      <div class="map"></div>
+      <div class="map" id="map-canvas"></div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,45 @@
+.app-download {
+  background: #1d2631;
+  height: 270px;
+  width: 100%;
+  padding: 28px 20px;
+  margin-bottom: 45px;
+
+  &__apps {
+    color: @white;
+    font-weight: 300;
+  }
+
+  &__list {
+    padding: 0 35px;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: inline-block;
+    cursor: pointer;
+
+    &--mac {
+      background: url(../img/icon-iphone.png) no-repeat;
+      height: 57px;
+      width: 46px;
+      margin-top: 31px;
+      margin-right: 35px;
+    }
+
+    &--android {
+      background: url(../img/icon-android.png) no-repeat;
+      width: 42px;
+      height: 47px;
+      margin-top: 40px;
+      margin-right: 35px;
+    }
+
+    &--windows {
+      background: url(../img/icon-windows.png) no-repeat;
+      width: 44px;
+      height: 42px;
+      margin-top: 43px;
+    }
+  }
+}
