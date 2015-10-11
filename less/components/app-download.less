@@ -1,17 +1,37 @@
 .app-download {
   background: #1d2631;
-  height: 270px;
   width: 100%;
   padding: 28px 20px;
   margin-bottom: 45px;
 
-  &__apps {
+  .tablet({
+    position: absolute;
+    top: 380px;
+    left: 30px;
+    width: 300px;
+    background: none;
+    margin-bottom: 0;
+    padding: 0;
+  });
+
+  &__text {
+    width: 280px;
     color: @white;
     font-weight: 300;
+    padding: 0;
+    margin: 0 auto;
+
+    .tablet({
+      width: 300px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.33;
+    });
   }
 
   &__list {
-    padding: 0 35px;
+    display: inline-block;
+    vertical-align: middle;
     margin-bottom: 25px;
   }
 
@@ -20,26 +40,38 @@
     cursor: pointer;
 
     &--mac {
-      background: url(../img/icon-iphone.png) no-repeat;
+      background: url(../img/apple-logo.svg) no-repeat;
       height: 57px;
       width: 46px;
       margin-top: 31px;
       margin-right: 35px;
+
+      .tablet({
+        margin-top: 45px;
+      });
     }
 
     &--android {
-      background: url(../img/icon-android.png) no-repeat;
+      background: url(../img/android-logo.svg) no-repeat;
       width: 42px;
       height: 47px;
       margin-top: 40px;
       margin-right: 35px;
+
+      .tablet({
+        margin-top: 54px;
+      });
     }
 
     &--windows {
-      background: url(../img/icon-windows.png) no-repeat;
+      background: url(../img/microsoft-logo.svg) no-repeat;
       width: 44px;
       height: 42px;
       margin-top: 43px;
+
+      .tablet({
+        margin-top: 57px;
+      });
     }
   }
 }

@@ -1,60 +1,126 @@
 .page-main {
   margin-bottom: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature {
   margin-bottom: 48px;
 
   &__header {
+    padding: 0;
+    margin: 0;
     font-size: 24px;
     line-height: 1.2;
     color: @gray-blue--20;
     font-weight: 300;
     text-align: center;
     padding: 0 20px;
-    margin-bottom: 115px;
+
+    .tablet({
+      margin-top: 60px;
+      font-size: 40px;
+      padding: 0 40px;
+      margin-bottom: 45px;
+    });
   }
 
   &__header-text {
     display: block;
+    margin: 0 auto;
     margin-bottom: 40px;
+    width: 280px;
+
+    .tablet({
+      width: 620px;
+    });
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .tablet({
+        margin: 0 auto;
+        width: 340px;
+      });
+    }
   }
 
-  &__list {
+  &__flex {
     position: relative;
+    padding: 0 20px;
     background: #f2f2f2;
 
     &:before {
       content: '';
       position: absolute;
-      height: 115px;
+      height: 95px;
       width: 100%;
-      top: -115px;
+      top: 0;
       left: 0;
-      background: url(../img/bg-gray.png) no-repeat 50% 0;
+      background: url(../img/triangle-white.svg) no-repeat 50% 0;
     }
+
+    .tablet({
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      padding: 0 40px;
+    });
+  }
+
+  &__list {
+    padding-top: 120px;
+    margin: 0 auto;
+
+    .tablet({
+      padding-top: 80px;
+      order: 2;
+    });
   }
 
   &__item {
-    padding: 0 20px;
     text-align: center;
     margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+
+    .tablet({
+      text-align: left;
+    });
   }
 
   &__heading {
+    padding: 0;
+    margin: 0;
     margin-bottom: 18px;
   }
 
   &__description {
+    padding: 0;
+    margin: 0 auto;
     color: @gray-blue--20;
     font-size: 14px;
     line-height: 1.71;
     font-weight: 400;
+    width: 280px;
+
+    .tablet({
+      width: 310px;
+    });
   }
 
   &__img {
     text-align: center;
-    height: 280px;
-    overflow: hidden;
+
+    .tablet({
+      margin: 0 auto;
+      margin-top: 36px;
+      margin-right: 45px;
+      order: 1;
+      z-index: 1;
+    });
   }
 }

@@ -1,9 +1,25 @@
 .slider {
-  margin-bottom: 125px;
 
   &__list {
     text-align: center;
     padding: 0 20px;
+
+    .tablet({
+      padding: 0 40px;
+    });
+  }
+
+  &__text {
+    order: 2;
+    width: 280px;
+    margin: 0 auto;
+
+    .tablet({
+      width: 620px;
+      font-size: 18px;
+      line-height: 1.67;
+      margin-bottom: 40px;
+    });
   }
 
   &__item {
@@ -12,16 +28,29 @@
     margin: 0 auto;
     margin-bottom: 35px;
 
-    p {
-      order: 2;
-    }
+    .tablet({
+      display: block;
+    });
   }
 
-  &__heading {
+  &__footer-heading {
     order: 1;
     font-size: 18px;
     line-height: 1.67;
     color: @gray;
     font-weight: 700;
+    margin-bottom: 20px;
+
+    .tablet({
+      margin-bottom: 10px;
+    });
+  }
+
+  &__footer-description {
+    display: none;
+
+    .tablet({
+      display: block;
+    });
   }
 }

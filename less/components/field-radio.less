@@ -5,10 +5,18 @@
   }
 
   input[type="radio"] + .field-radio__name {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
     position: relative;
     margin-bottom: 52px;
+    width: 196px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + .field-radio__name--pos {
+
+    .tablet({
+      margin-top: 50px;
+    });
   }
 
   input[type="radio"] + .field-radio__name:before {

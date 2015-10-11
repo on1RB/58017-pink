@@ -1,18 +1,49 @@
 .main-form {
   margin: 0 auto;
+  max-width: 1200px;
+
+  .tablet({
+    padding: 0 40px;
+  });
 
   &__fieldset {
     border: none;
     padding: 0 20px;
     margin: 0;
 
+    .tablet({
+      padding: 0 58px;
+      position: relative;
+    });
+
     &--bg-gray {
       background: @bg-gray;
+
+      .tablet({
+        background: none;
+      });
+    }
+
+    &--border {
+
+      .tablet({
+        margin-bottom: 65px;
+        border: 2px solid @border-gray;
+        font-size: 0;
+      });
+    }
+
+    &--flex-container {
+
+      .tablet({
+        padding-top: 40px;
+      });
     }
   }
 
   &__text {
-    margin: 0;
+    width: 280px;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
     color: @pink;
@@ -20,15 +51,64 @@
     padding-top: 50px;
     margin-bottom: 45px;
 
+    .tablet({
+      width: 370px;
+    });
+
+    &--width {
+
+      .tablet({
+        width: 270px;
+      });
+    }
+
+    &--w {
+
+      .tablet({
+        width: 440px;
+      });
+    }
+
+    &--pos {
+
+      .tablet({
+        padding: 0 20px;
+        margin: 0;
+        position: absolute;
+        top: -9px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: @white;
+        font-size: 14px;
+        line-height: 120%;
+      });
+    }
+
     &--color {
       color: @gray-blue--20;
       text-transform: none;
+
+      .tablet({
+        font-size: 18px;
+        line-height: 1.67;
+        width: 500px;
+      });
     }
+  }
+
+  &__fill-form {
+
+    .tablet({
+      font-size: 18px;
+      line-height: 1.67;
+    });
   }
 
   &__counter {
     padding-left: 61px;
     counter-reset: heading;
+    padding-top: 35px;
+    border-top: 2px solid @border-gray;
 
     &--number {
       position: relative;
@@ -44,9 +124,13 @@
         top: 31px;
         left: -59px;
         width: 61px;
-        height: 62.6px;
+        height: 65px;
         border: 2px solid @border-gray;
         color: @gray-blue--20;
+
+        .tablet({
+          background: @bg-gray;
+        });
       }
 
       &:after {
@@ -64,6 +148,8 @@
     padding-top: 35px;
     border-top: 2px solid @border-gray;
     font-size: 0;
+    width: 280px;
+    margin: 0 auto;
   }
 
   &__photos-list-item {

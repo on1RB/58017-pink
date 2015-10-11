@@ -1,17 +1,30 @@
 .developed {
-  position: relative;
   text-decoration: none;
   padding: 0;
   margin: 0;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   margin-bottom: 60px;
   cursor: pointer;
+
+  &--page-main {
+
+    .tablet({
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 50px;
+      margin-bottom: 45px;
+    });
+  }
 
   &__text {
     font-size: 14px;
     line-height: 1.29;
     color: @gray-blue--20;
     margin-right: 16px;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
