@@ -1,10 +1,18 @@
 .page-footer {
   margin: 0 auto;
-  max-width: 1200px;
   text-align: center;
 
+  &--flex-container{
+    padding: 0 40px;
+
+    .tablet({
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    });
+  }
+
   &__heading {
-    width: 280px;
     margin: 0 auto;
     padding: 0 20px;
     font-size: 24px;
@@ -96,6 +104,10 @@
   &__logo {
     margin-bottom: 48px;
 
+    .tablet({
+      margin-bottom: 40px;
+    });
+
     &--page-main {
 
       .tablet({
@@ -110,6 +122,9 @@
   &__social-list {
     margin-bottom: 40px;
     font-size: 0;
+
+    .tablet({
+    });
 
     &--page-main {
 

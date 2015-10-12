@@ -1,6 +1,5 @@
 .main-form {
   margin: 0 auto;
-  max-width: 1200px;
 
   .tablet({
     padding: 0 40px;
@@ -16,6 +15,13 @@
       position: relative;
     });
 
+    &--padding0 {
+
+      .tablet({
+        padding: 0;
+      });
+    }
+
     &--bg-gray {
       background: @bg-gray;
 
@@ -30,13 +36,7 @@
         margin-bottom: 65px;
         border: 2px solid @border-gray;
         font-size: 0;
-      });
-    }
-
-    &--flex-container {
-
-      .tablet({
-        padding-top: 40px;
+        padding-top: 50px;
       });
     }
   }
@@ -55,14 +55,14 @@
       width: 370px;
     });
 
-    &--width {
+    &--width270 {
 
       .tablet({
         width: 270px;
       });
     }
 
-    &--w {
+    &--width440 {
 
       .tablet({
         width: 440px;
@@ -144,26 +144,40 @@
     }
   }
 
+  &__photos {
+    border-top: 2px solid @border-gray;
+  }
+
   &__photos-list {
     padding-top: 35px;
-    border-top: 2px solid @border-gray;
     font-size: 0;
-    width: 280px;
-    margin: 0 auto;
+    margin-left: -40px;
+
+    .tablet({
+      padding-top: 65px;
+      margin-left: -87px;
+    });
   }
 
   &__photos-list-item {
     display: inline-block;
     vertical-align: top;
-    margin-right: 39px;
     position: relative;
+    margin-left: 38px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    .tablet({
+      margin-left: 70px;
+    });
 
     img {
+      width: 68px;
+      height: 68px;
       margin-bottom: 8px;
+
+      .tablet({
+        width: 120px;
+        height: 120px;
+      });
     }
   }
 
@@ -178,6 +192,11 @@
     border-radius: 50%;
     cursor: pointer;
 
+    .tablet({
+      width: 55px;
+      height: 55px;
+    });
+
     &:before,
     &:after {
       content: '';
@@ -187,6 +206,12 @@
       width: 14px;
       height: 2px;
       background: #c1c1c1;
+
+      .tablet({
+        width: 26px;
+        top: 24px;
+        left: 13px;
+      });
     }
 
     &:before {
@@ -213,5 +238,10 @@
     padding: 0 20px;
     margin: 0;
     text-align: center;
+
+    .tablet({
+      padding: 0;
+      text-align: left;
+    });
   }
 }

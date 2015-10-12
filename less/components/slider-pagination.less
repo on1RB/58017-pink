@@ -3,6 +3,11 @@
   margin: 0 auto;
   text-align: center;
   font-size: 0;
+  padding-bottom: 47px;
+
+  &--paddingb0 {
+    padding-bottom: 0;
+  }
 
   &__item {
     display: inline-block;
@@ -12,6 +17,10 @@
     border-radius: 50%;
     background-color: @pagination-gray;
     margin-right: 16px;
+
+    .tablet({
+      display: none;
+    });
 
     &--active {
       width: 12px;
