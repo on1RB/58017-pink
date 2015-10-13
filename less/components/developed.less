@@ -28,8 +28,18 @@
     margin-right: 16px;
   }
 
+  &__text:hover + svg {
+    fill: @gray-blue--20;
+  }
+
+  &__text:active + svg {
+    fill: @gray-blue--20;
+    opacity: 0.3;
+  }
+
   svg {
     display: inline-block;
     vertical-align: middle;
+    fill: @pink;
   }
 }

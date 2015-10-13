@@ -6,13 +6,73 @@
   left: 22px;
   z-index: 10;
   cursor: pointer;
-  background: url(../img/logotype-white-mobile.svg) no-repeat 0 100%;
 
   .tablet({
     left: 40px;
     top: 27px;
     height: 40px;
     width: 145px;
-    background: url(../img/logotype-white-tablet.svg) no-repeat 0 100%;
   });
+
+  &__pink {
+    fill: @white;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    .tablet({
+      display: none;
+    });
+
+    .desktop({
+      display: none;
+    });
+  }
+
+  &__pink-glasses {
+    display: none;
+
+    .tablet({
+      display: block;
+      fill: @white;
+    });
+
+    .desktop({
+      display: none;
+    });
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__pink-glasses-star {
+    display: none;
+
+    .tablet({
+      display: none;
+    });
+
+    .desktop({
+      fill: @white;
+      display: block;
+    });
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

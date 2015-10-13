@@ -123,12 +123,14 @@
         line-height: 120%;
         top: 31px;
         left: -59px;
-        width: 61px;
-        height: 65px;
+        width: 59px;
+        height: 63px;
         border: 2px solid @border-gray;
         color: @gray-blue--20;
+        border-right: none;
 
         .tablet({
+          border-right: 2px solid @border-gray;
           background: @bg-gray;
         });
       }
@@ -193,6 +195,8 @@
     cursor: pointer;
 
     .tablet({
+      top: -26px;
+      left: 91px;
       width: 55px;
       height: 55px;
     });
@@ -220,6 +224,24 @@
 
     &:after {
       transform: rotate(-45deg);
+    }
+
+    &:hover {
+      border-color: @gray-blue--20;
+
+      &:after,
+      &:before {
+        background-color: @gray-blue--20;
+      }
+    }
+
+    &:active {
+      background: @gray-blue--20;
+
+      &:after,
+      &:before {
+        background-color: @white;
+      }
     }
   }
 

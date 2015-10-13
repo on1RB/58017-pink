@@ -18,6 +18,14 @@
     background-color: @pagination-gray;
     margin-right: 16px;
 
+    &:hover {
+      background-color: #7e868f;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     .tablet({
       display: none;
     });
@@ -26,8 +34,17 @@
       width: 12px;
       height: 12px;
       border: 3px solid @gray-blue--20;
-      background: #fff;
+      background: @white;
       border-radius: 50%;
+
+      &:hover {
+        background: @white;
+      }
+
+      &:active {
+        background: @white;
+        opacity: 1;
+      }
     }
   }
 }

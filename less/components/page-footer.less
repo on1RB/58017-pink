@@ -78,6 +78,18 @@
     });
   }
 
+  &__pink-glasses-fill {
+    fill: @gray-blue--20;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
   &__title {
     display: block;
     font-size: 18px;
@@ -94,10 +106,21 @@
     font-weight: 300;
     color: @pink;
 
+    &:hover {
+      color: @gray-blue--20;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @gray-blue--20;
+      opacity: 0.3;
+    }
+
     &--width {
       width: 250px;
       margin: 0 auto;
       display: block;
+      cursor: pointer;
     }
   }
 
@@ -136,4 +159,8 @@
       });
     }
   }
+}
+
+.fill {
+  fill: @pink;
 }

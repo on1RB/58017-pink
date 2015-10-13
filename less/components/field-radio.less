@@ -5,11 +5,13 @@
   }
 
   input[type="radio"] + .field-radio__name {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     position: relative;
     margin-bottom: 52px;
-    width: 196px;
+    margin-right: 100px;
     cursor: pointer;
+    width: 196px;
   }
 
   input[type="radio"] + .field-radio__name:before {
@@ -43,4 +45,13 @@
     font-weight: 400;
     padding-left: 60px;
   }
+
+  &:hover input[type="radio"] + .field-radio__name:before {
+    border-color: @gray-blue--20;
+  }
+
+  &:active input[type="radio"] + .field-radio__name:before {
+    border-color: @pink;
+  }
+
 }
