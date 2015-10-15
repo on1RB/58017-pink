@@ -2,13 +2,34 @@
   margin: 0 auto;
   text-align: center;
 
+  // &__center-wrapper {
+  //   margin: 0 auto;
+  //   padding: 0 20px;
+
+  //   .tablet({
+  //     width: 660px;
+  //   });
+
+  //   .desktop({
+  //     width: 960px;
+  //     padding: 0 10px;
+  //   });
+  // }
+
   &--flex-container{
-    padding: 0 40px;
+    padding: 0 20px;
 
     .tablet({
+      margin: 0 auto;
+      width: 660px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    });
+
+    .desktop({
+      width: 960px;
+      padding: 0 10px;
     });
   }
 
@@ -32,13 +53,19 @@
 
   &__flex-container {
     padding: 0 20px;
+    margin: 0 auto;
 
     .tablet({
-      padding: 0 40px;
+      width: 660px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+    });
+
+    .desktop({
+      width: 960px;
+      padding: 0 10px;
     });
   }
 
@@ -70,11 +97,18 @@
     display: none;
 
     .tablet({
+      margin: 0 auto;
       text-align: center;
-      padding: 0 40px;
+      padding: 0 20px;
+      width: 660px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    });
+
+    .desktop({
+      width: 960px;
+      padding: 0 10px;
     });
   }
 

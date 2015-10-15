@@ -2,16 +2,20 @@
   background: #1d2631;
   width: 100%;
   padding: 28px 20px;
-  margin-bottom: 45px;
 
   .tablet({
     position: absolute;
-    top: 380px;
-    left: 30px;
+    vertical-align: top;
+    bottom: 115px;
+    left: 10px;
     width: 300px;
     background: none;
     margin-bottom: 0;
     padding: 0;
+  });
+
+  .desktop({
+    bottom: 120px;
   });
 
   &__text {
@@ -32,6 +36,10 @@
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 25px;
+
+    .desktop({
+      margin-bottom: 50px;
+    });
   }
 
   &__item {
@@ -48,6 +56,10 @@
       .tablet({
         margin-top: 45px;
       });
+
+      .desktop({
+        margin-top: 66px;
+      });
     }
 
     &--android {
@@ -60,6 +72,10 @@
       .tablet({
         margin-top: 54px;
       });
+
+      .desktop({
+        margin-top: 75px;
+      });
     }
 
     &--windows {
@@ -70,6 +86,10 @@
 
       .tablet({
         margin-top: 57px;
+      });
+
+      .desktop({
+        margin-top: 78px;
       });
     }
   }

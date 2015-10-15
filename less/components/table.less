@@ -1,21 +1,30 @@
 .table {
   display: block;
   position: relative;
-  width: 100%;
   background: #f2f2f2;
   padding-top: 130px;
   margin-bottom: 50px;
 
-  &__hidden {
-    overflow: hidden;
-  }
-
   .tablet({
-    padding: 0 40px;
     padding-top: 110px;
     padding-bottom: 70px;
     margin-bottom: 55px;
   });
+
+  &__hidden {
+    overflow: hidden;
+    margin: 0 auto;
+
+    .tablet({
+      padding: 0 20px;
+      width: 660px;
+    });
+
+    .desktop({
+      padding: 0 10px;
+      width: 960px;
+    });
+  }
 
   &:before {
     content: '';
