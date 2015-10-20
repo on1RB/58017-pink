@@ -1,31 +1,230 @@
-.page-header {
-  text-align: center;
-  position: relative;
-  background: url(../img/header-bg.jpg) no-repeat scroll 50% -37%;
+// .page-header {
+//   text-align: center;
+//   position: relative;
+//   background: url(../img/header-bg.jpg) no-repeat scroll 50% -37%;
 
-  &__inner {
-    padding: 0 20px;
-    margin: 0 auto;
-    height: 460px;
+//   &__inner {
+//     padding: 0 20px;
+//     margin: 0 auto;
+//     height: 460px;
+//     overflow: hidden;
+
+//     &--img-hand {
+//       background: url(../img/hand.png) no-repeat scroll 50% 120%;
+//     }
+//   }
+
+//   &__name {
+//     padding-top: 90px;
+//   }
+
+//   &--bg-pos {
+//     background: url(../img/header-bg.jpg) no-repeat scroll 50% 20.5%;
+//   }
+
+//   &__inner {
+
+//     &--height {
+//       height: 237px;
+//     }
+//   }
+// }
+.page-header {
+  position: relative;
+
+  overflow: hidden;
+
+  margin: 0 auto;
+
+  text-align: center;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
     overflow: hidden;
 
-    &--img-hand {
-      background: url(../img/hand.png) no-repeat scroll 50% 120%;
+    width: 700px;
+    height: 460px;
+
+    transform: translateX(-50%);
+    @media screen and (min-resolution:96dpi) and (min-width: @screen-sm) {
+      background: url(../img/background-mobile@1x.jpg);
+      background-size: cover;
+    }
+    @media screen and (min-resolution:192dpi) and (min-width: @screen-sm) {
+      background: url(../img/background-mobile@2x.jpg);
+      background-size: cover;
+    }
+    @media screen and (min-resolution:288dpi) and (min-width: @screen-sm) {
+      background: url(../img/background-mobile@3x.jpg);
+      background-size: cover;
+    }
+    @media (min-width: @screen-md) {
+      width: 1200px;
+      height: 729px;
+    }
+    @media screen and (min-resolution:96dpi) and (min-width: @screen-md) {
+      background: url(../img/background-tablet@1x.jpg);
+      background-size: cover;
+    }
+    @media screen and (min-resolution:192dpi) and (min-width: @screen-md) {
+      background: url(../img/background-tablet@2x.jpg);
+      background-size: cover;
+    }
+    @media (min-width: @screen-lg) {
+      width: 2560px;
+      height: 855px;
+    }
+    @media screen and (min-resolution:96dpi) and (min-width: @screen-lg) {
+      background: url(../img/background-fullsize.jpg);
+      background-position: 50% 0;
+      background-size: contain;
     }
   }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  &__name {
-    padding-top: 90px;
+    width: 100%;
+    height: 66px;
+
+    background: rgba(0, 0, 0, .3);
+    @media (min-width: @screen-md) {
+      height: 110px;
+    }
   }
-
-  &--bg-pos {
-    background: url(../img/header-bg.jpg) no-repeat scroll 50% 20.5%;
-  }
-
   &__inner {
+    overflow: hidden;
 
+    height: 460px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 174px;
+      left: 50%;
+
+      width: 258px;
+      height: 286px;
+
+      transform: translateX(-50%);
+      @media (min-width: @screen-md) {
+        top: 184px;
+
+        width: 700px;
+        height: 545px;
+      }
+      @media (min-width: @screen-lg) {
+        top: 210px;
+
+        width: 1050px;
+        height: 645px;
+      }
+      @media screen and (min-resolution:96dpi) and (min-width: @screen-sm) {
+        background: url(../img/iphone-hand-mobile.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:192dpi) and (min-width: @screen-sm) {
+        background: url(../img/iphone-hand-mobile@2x.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:288dpi) and (min-width: @screen-sm) {
+        background: url(../img/iphone-hand-mobile@3x.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:96dpi) and (min-width: @screen-md) {
+        background: url(../img/iphone-hand-tablet@1x.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:192dpi) and (min-width: @screen-md) {
+        background: url(../img/iphone-hand-tablet@2x.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:96dpi) and (min-width: @screen-lg) {
+        background: url(../img/iphone-hand-desktop@1x.png);
+        background-size: cover;
+      }
+      @media screen and (min-resolution:192dpi) and (min-width: @screen-lg) {
+        background: url(../img/iphone-hand-desktop@2x.png);
+        background-size: cover;
+      }
+    }
+    @media (min-width: @screen-md) {
+      width: 660px;
+      height: 729px;
+    }
+    @media (min-width: @screen-lg) {
+      position: relative;
+      z-index: 1;
+
+      width: 960px;
+      height: 855px;
+      padding: 0 10px;
+    }
     &--height {
-      height: 237px;
+      height: 240px;
+      &:before {
+        display: none;
+      }
+      @media (min-width: @screen-md) {
+        height: 440px;
+      }
+      @media (min-width: @screen-lg) {
+        height: 395px;
+      }
+    }
+  }
+  &__center-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+    @media (min-width: @screen-md) {
+      width: 640px;
+      padding: 0 20px;
+    }
+    @media (min-width: @screen-lg) {
+      width: 960px;
+      padding: 0 10px;
+    }
+  }
+  &__name {
+    position: relative;
+
+    margin-top: 90px;
+    @media (min-width: @screen-md) {
+      width: 200px;
+      margin-top: 205px;
+      margin-left: 50px;
+
+      font-size: 40px;
+      line-height: 120%;
+    }
+    @media (min-width: @screen-lg) {
+      width: 300px;
+      margin-top: 120px;
+      margin-left: 0;
+
+      font-size: 50px;
+    }
+    &--pos-center {
+      width: 280px;
+      margin: 0 auto;
+      margin-top: 100px;
+      @media (min-width: @screen-md) {
+        width: 480px;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 190px;
+      }
+      @media (min-width: @screen-lg) {
+        width: auto;
+        padding-top: 75px;
+      }
     }
   }
 }

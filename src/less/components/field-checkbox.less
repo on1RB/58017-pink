@@ -1,43 +1,99 @@
-.field-checkbox {
+// .field-checkbox {
 
+//   input {
+//     display: none;
+//   }
+
+//   input[type="checkbox"] + .field-checkbox__name {
+//     display: inline-block;
+//     vertical-align: top;
+//     position: relative;
+//     margin-bottom: 60px;
+//   }
+
+//   input[type="checkbox"] + .field-checkbox__name:before {
+//     content: '';
+//     position: absolute;
+//     width: 39px;
+//     height: 39px;
+//     border: 2px solid @border-gray;
+//     top: -5px;
+//     left: 0;
+//   }
+
+//   input[type="checkbox"]:checked + .field-checkbox__name:after {
+//     content: '';
+//     position: absolute;
+//     top: 6px;
+//     left: 9px;
+//     width: 22px;
+//     height: 10px;
+//     border: 2px solid @pink;
+//     border-top: transparent;
+//     border-right: transparent;
+//     transform: rotate(-45deg);
+//   }
+
+//   &__name {
+//     font-size: 18px;
+//     line-height: 1.67;
+//     color: @gray-blue--20;
+//     padding-left: 60px;
+//   }
+// }
+.field-checkbox {
   input {
     display: none;
   }
-
   input[type="checkbox"] + .field-checkbox__name {
-    display: inline-block;
-    vertical-align: top;
     position: relative;
-    margin-bottom: 60px;
-  }
 
+    display: inline-block;
+
+    width: 280px;
+    margin-bottom: 60px;
+
+    cursor: pointer;
+    vertical-align: top;
+  }
   input[type="checkbox"] + .field-checkbox__name:before {
-    content: '';
+    content: "";
     position: absolute;
-    width: 39px;
-    height: 39px;
-    border: 2px solid @border-gray;
     top: -5px;
     left: 0;
-  }
 
+    width: 39px;
+    height: 39px;
+
+    border: 2px solid @border-gray;
+  }
   input[type="checkbox"]:checked + .field-checkbox__name:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 6px;
     left: 9px;
+
     width: 22px;
     height: 10px;
+
+    transform: rotate(-45deg);
+
     border: 2px solid @pink;
     border-top: transparent;
     border-right: transparent;
-    transform: rotate(-45deg);
   }
-
   &__name {
+    padding-left: 60px;
+
     font-size: 18px;
     line-height: 1.67;
+
     color: @gray-blue--20;
-    padding-left: 60px;
+  }
+  &:hover input[type="checkbox"] + .field-checkbox__name:before {
+    border-color: @gray-blue--20;
+  }
+  &:active input[type="checkbox"] + .field-checkbox__name:before {
+    border-color: @pink;
   }
 }

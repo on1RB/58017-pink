@@ -1,15 +1,50 @@
+// .btn-download {
+//   display: block;
+//   margin: 0 auto;
+//   padding: 15px 35px;
+//   text-decoration: none;
+//   color: @white;
+//   text-align: center;
+//   font-size: 18px;
+//   line-height: 1;
+//   font-weight: 700;
+//   border: 3px solid #fff;
+//   border-radius: 25px;
+//   height: 55px;
+//   width: 280px;
+// }
 .btn-download {
   display: block;
+
+  width: 280px;
   margin: 0 auto;
   padding: 15px 35px;
-  text-decoration: none;
-  color: @white;
-  text-align: center;
+
   font-size: 18px;
-  line-height: 1;
   font-weight: 700;
+  line-height: 1;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: @white;
   border: 3px solid #fff;
   border-radius: 25px;
-  height: 55px;
-  width: 280px;
+  @media (min-width: @screen-md) {
+    margin: 0;
+  }
+  @media (min-width: @screen-lg) {
+    min-width: 300px;
+    padding: 15px 28px;
+
+    font-size: 21px;
+  }
+  &:hover {
+    color: @pink;
+    background: @white;
+  }
+  &:active {
+    color: rgba(210, 40, 86, .3);
+    background: @white;
+  }
 }

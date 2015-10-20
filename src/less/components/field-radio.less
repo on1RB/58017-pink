@@ -1,45 +1,110 @@
-.field-radio {
+// .field-radio {
 
+//   input {
+//     display: none;
+//   }
+
+//   input[type="radio"] + .field-radio__name {
+//     display: inline-block;
+//     vertical-align: top;
+//     position: relative;
+//     margin-bottom: 52px;
+//   }
+
+//   input[type="radio"] + .field-radio__name:before {
+//     content: '';
+//     position: absolute;
+//     height: 39px;
+//     width: 39px;
+//     left: 0;
+//     top: -4px;
+//     border: 2px solid @border-gray;
+//     border-radius: 50%;
+//     background: @white;
+//   }
+
+//   input[type="radio"]:checked + .field-radio__name:after {
+//     content: '';
+//     position: absolute;
+//     height: 15px;
+//     width: 15px;
+//     top: 8px;
+//     left: 19.5px;
+//     margin-left: -7.5px;
+//     border-radius: 50%;
+//     background: @pink;
+//   }
+
+//   &__name {
+//     font-size: 18px;
+//     line-height: 1.67;
+//     color: @gray-blue--20;
+//     font-weight: 400;
+//     padding-left: 60px;
+//   }
+// }
+.field-radio {
+  display: block;
+
+  width: 200px;
+  height: 30px;
+  margin-bottom: 52px;
+  @media (min-width: @screen-lg) {
+    display: inline-block;
+
+    vertical-align: top;
+  }
   input {
     display: none;
   }
-
   input[type="radio"] + .field-radio__name {
-    display: inline-block;
-    vertical-align: top;
     position: relative;
-    margin-bottom: 52px;
-  }
 
+    display: block;
+
+    width: 200px;
+
+    cursor: pointer;
+  }
   input[type="radio"] + .field-radio__name:before {
-    content: '';
+    content: "";
     position: absolute;
-    height: 39px;
-    width: 39px;
-    left: 0;
     top: -4px;
+    left: 0;
+
+    width: 39px;
+    height: 39px;
+
     border: 2px solid @border-gray;
     border-radius: 50%;
     background: @white;
   }
-
   input[type="radio"]:checked + .field-radio__name:after {
-    content: '';
+    content: "";
     position: absolute;
-    height: 15px;
-    width: 15px;
     top: 8px;
     left: 19.5px;
+
+    width: 15px;
+    height: 15px;
     margin-left: -7.5px;
+
     border-radius: 50%;
     background: @pink;
   }
-
   &__name {
-    font-size: 18px;
-    line-height: 1.67;
-    color: @gray-blue--20;
-    font-weight: 400;
     padding-left: 60px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.67;
+
+    color: @gray-blue--20;
+  }
+  &:hover input[type="radio"] + .field-radio__name:before {
+    border-color: @gray-blue--20;
+  }
+  &:active input[type="radio"] + .field-radio__name:before {
+    border-color: @pink;
   }
 }
