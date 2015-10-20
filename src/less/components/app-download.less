@@ -1,30 +1,118 @@
+// .app-download {
+//   width: 100%;
+//   height: 270px;
+//   margin-bottom: 45px;
+//   padding: 28px 20px;
+
+//   background: #1d2631;
+//   &__apps {
+//     font-weight: 300;
+
+//     color: @white;
+//   }
+//   &__list {
+//     margin-bottom: 25px;
+//     padding: 0 35px;
+//   }
+//   &__item {
+//     display: inline-block;
+
+//     cursor: pointer;
+//     &--mac {
+//       width: 46px;
+//       height: 57px;
+//       margin-top: 31px;
+//       margin-right: 35px;
+
+//       background: url(../img/icon-iphone.png) no-repeat;
+//     }
+//     &--android {
+//       width: 42px;
+//       height: 47px;
+//       margin-top: 40px;
+//       margin-right: 35px;
+
+//       background: url(../img/icon-android.png) no-repeat;
+//     }
+//     &--windows {
+//       width: 44px;
+//       height: 42px;
+//       margin-top: 43px;
+
+//       background: url(../img/icon-windows.png) no-repeat;
+//     }
+//   }
+// }
 .app-download {
   width: 100%;
-  height: 270px;
-  margin-bottom: 45px;
   padding: 28px 20px;
 
   background: #1d2631;
-  &__apps {
+  @media (min-width: @screen-md) {
+    position: absolute;
+    bottom: 115px;
+    left: 10px;
+
+    width: 300px;
+    margin-bottom: 0;
+    padding: 0;
+
+    vertical-align: top;
+
+    background: none;
+  }
+  @media (min-width: @screen-lg) {
+    z-index: 1;
+    bottom: 120px;
+  }
+  &__text {
+    margin: 0 auto;
+    padding: 0;
+
     font-weight: 300;
 
     color: @white;
+    @media (min-width: @screen-md) {
+      margin: 0;
+
+      font-size: 18px;
+      line-height: 1.33;
+    }
   }
   &__list {
+    display: inline-block;
+
     margin-bottom: 25px;
-    padding: 0 35px;
+
+    font-size: 0;
+
+    vertical-align: middle;
+    @media (min-width: @screen-lg) {
+      margin-bottom: 50px;
+    }
   }
   &__item {
     display: inline-block;
 
+    font: 0/0 a;
+
     cursor: pointer;
-    &--mac {
+    vertical-align: top;
+
+    color: transparent;
+    &--apple {
       width: 46px;
       height: 57px;
       margin-top: 31px;
       margin-right: 35px;
 
-      background: url(../img/icon-iphone.png) no-repeat;
+      background: url(../img/apple-logo.svg) no-repeat;
+      @media (min-width: @screen-md) {
+        margin-top: 45px;
+      }
+      @media (min-width: @screen-lg) {
+        margin-top: 66px;
+      }
     }
     &--android {
       width: 42px;
@@ -32,14 +120,26 @@
       margin-top: 40px;
       margin-right: 35px;
 
-      background: url(../img/icon-android.png) no-repeat;
+      background: url(../img/android-logo.svg) no-repeat;
+      @media (min-width: @screen-md) {
+        margin-top: 54px;
+      }
+      @media (min-width: @screen-lg) {
+        margin-top: 75px;
+      }
     }
     &--windows {
       width: 44px;
       height: 42px;
       margin-top: 43px;
 
-      background: url(../img/icon-windows.png) no-repeat;
+      background: url(../img/microsoft-logo.svg) no-repeat;
+      @media (min-width: @screen-md) {
+        margin-top: 57px;
+      }
+      @media (min-width: @screen-lg) {
+        margin-top: 78px;
+      }
     }
   }
 }
