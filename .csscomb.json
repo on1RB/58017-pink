@@ -376,6 +376,7 @@
       "clip-path",
       "zoom"
     ]
+
   ]"always-semicolon": true,
   "block-indent": "  ",
   "color-case": "lower",
