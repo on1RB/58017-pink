@@ -3,6 +3,7 @@
   padding: 28px 20px;
 
   background: #1d2631;
+
   @media (min-width: @screen-md) {
     position: absolute;
     bottom: 115px;
@@ -16,17 +17,19 @@
 
     background: none;
   }
+
   @media (min-width: @screen-lg) {
-    z-index: 1;
     bottom: 120px;
+    z-index: 1;
   }
+
   &__text {
     margin: 0 auto;
     padding: 0;
 
     font-weight: 300;
-
     color: @white;
+
     @media (min-width: @screen-md) {
       margin: 0;
 
@@ -34,27 +37,28 @@
       line-height: 1.33;
     }
   }
+
   &__list {
     display: inline-block;
-
     margin-bottom: 25px;
 
     font-size: 0;
-
     vertical-align: middle;
+
     @media (min-width: @screen-lg) {
       margin-bottom: 50px;
     }
   }
+
   &__item {
     display: inline-block;
 
     font: 0/0 a;
+    vertical-align: top;
+    color: transparent;
 
     cursor: pointer;
-    vertical-align: top;
 
-    color: transparent;
     &--apple {
       width: 46px;
       height: 57px;
@@ -62,13 +66,16 @@
       margin-right: 35px;
 
       background: url(../img/apple-logo.svg) no-repeat;
+
       @media (min-width: @screen-md) {
         margin-top: 45px;
       }
+
       @media (min-width: @screen-lg) {
         margin-top: 66px;
       }
     }
+
     &--android {
       width: 42px;
       height: 47px;
@@ -76,22 +83,27 @@
       margin-right: 35px;
 
       background: url(../img/android-logo.svg) no-repeat;
+
       @media (min-width: @screen-md) {
         margin-top: 54px;
       }
+
       @media (min-width: @screen-lg) {
         margin-top: 75px;
       }
     }
+
     &--windows {
       width: 44px;
       height: 42px;
       margin-top: 43px;
 
       background: url(../img/microsoft-logo.svg) no-repeat;
+
       @media (min-width: @screen-md) {
         margin-top: 57px;
       }
+
       @media (min-width: @screen-lg) {
         margin-top: 78px;
       }
