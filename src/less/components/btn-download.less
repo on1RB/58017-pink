@@ -1,0 +1,39 @@
+.btn-download {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 15px 35px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: @white;
+  text-decoration: none;
+
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+
+  @media (min-width: @screen-md) {
+    margin: 0;
+  }
+
+  @media (min-width: @screen-lg) {
+    min-width: 300px;
+    padding: 15px 28px;
+
+    font-size: 21px;
+  }
+
+  &:hover {
+    color: @pink;
+
+    background: @white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+
+    background: @white;
+  }
+}

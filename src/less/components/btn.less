@@ -1,0 +1,57 @@
+.btn {
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 42px;
+  padding: 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  color: @white;
+  text-transform: uppercase;
+
+  background: #2aab6d;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255,255,255, 0.3);
+
+    background: #1c9b5e;
+  }
+
+  &:disabled {
+    background: #e5e5e5;
+  }
+
+  @media (min-width: @screen-md) {
+    width: 300px;
+    margin-bottom: 100px;
+  }
+
+  &__text {
+    display: inline-block;
+    margin-bottom: 60px;
+
+    font-size: 14px;
+    line-height: 120%;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    @media (min-width: @screen-md) {
+      float: right;
+      width: 175px;
+      margin-top: 73px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__star {
+    color: @pink;
+  }
+}

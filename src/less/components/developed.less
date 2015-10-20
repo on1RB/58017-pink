@@ -1,0 +1,51 @@
+.developed {
+  display: block;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  @media (min-width: @screen-md) {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &--page-main {
+    @media (min-width: @screen-md) {
+      display: inline-block;
+      margin-top: 50px;
+      margin-bottom: 45px;
+
+      vertical-align: top;
+    }
+  }
+
+  &__text {
+    margin-right: 16px;
+
+    font-size: 14px;
+    line-height: 1.29;
+    color: @gray-blue--20;
+  }
+
+  &:hover svg {
+    fill: @gray-blue--20;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+
+    fill: @gray-blue--20;
+  }
+
+  svg {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    fill: @pink;
+  }
+}

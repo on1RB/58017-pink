@@ -1,0 +1,59 @@
+.slider-pagination {
+  width: 140px;
+  margin: 0 auto;
+
+  font-size: 0;
+  text-align: center;
+
+  @media (min-width: @screen-lg) {
+    display: none;
+  }
+
+  &--padding-bottom-47 {
+    padding-bottom: 47px;
+
+    @media (min-width: @screen-md) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 16px;
+
+    vertical-align: middle;
+
+    background-color: @pagination-gray;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #7e868f;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      width: 12px;
+      height: 12px;
+
+      background: @white;
+      border: 3px solid @gray-blue--20;
+      border-radius: 50%;
+      cursor: default;
+
+      &:hover {
+        background: @white;
+      }
+
+      &:active {
+        background: @white;
+        opacity: 1;
+      }
+    }
+  }
+}

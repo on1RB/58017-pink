@@ -1,0 +1,56 @@
+.social-links {
+  &__item {
+    position: relative;
+
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    margin-right: 12px;
+
+    font: 0/0 a;
+    color: transparent;
+
+    background: @white;
+    border: 2px solid @border-gray;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      border-color: @gray-blue--20;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--twitter {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+
+      display: block;
+      width: 18px;
+      height: 15px;
+    }
+
+    &--facebook {
+      position: absolute;
+      top: 13px;
+      left: 20px;
+
+      display: block;
+      width: 9px;
+      height: 19px;
+    }
+
+    &--play {
+      position: absolute;
+      top: 17px;
+      left: 18px;
+
+      display: block;
+      width: 15px;
+      height: 14px;
+    }
+  }
+}

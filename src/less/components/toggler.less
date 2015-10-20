@@ -1,0 +1,93 @@
+.toggler {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+
+  align-items: center;
+  width: 50px;
+  height: 24px;
+
+  user-select: none;
+
+  @media (min-width: @screen-md) {
+    top: 44px;
+  }
+
+  @media (min-width: @screen-lg) {
+    display: none;
+  }
+
+  > span {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+
+    background: @white;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      background: @white;
+      transform-origin: 50% 50%;
+
+      transition: top 0.3s 0.6s, transform 0.3s;
+    }
+
+    &:before {
+      top: 10px;
+    }
+
+    &:after {
+      top: -10px;
+    }
+  }
+
+  &:hover > span,
+  &:hover > span:before,
+  &:hover > span:after {
+    background: @pink;
+  }
+
+  &:active > span {
+    background: @pink;
+    opacity: 0.3;
+  }
+
+
+  &:active > span:before,
+  &:active > span:after {
+    background: @pink;
+  }
+
+  &--close {
+    > span {
+      background: transparent;
+
+      transition: background 0.3s 0;
+
+      &:before,
+      &:after {
+        top: 0;
+
+        transition: top 0.3s, transform 0.3s 0.5s;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

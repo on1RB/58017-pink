@@ -1,0 +1,163 @@
+.slider {
+  &__bg-gray {
+    @media (min-width: @screen-lg) {
+      display: block;
+
+      background: #f2f2f2;
+    }
+  }
+
+  &__center-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: @screen-md) {
+      width: 660px;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 960px;
+      padding: 0 10px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__text {
+    order: 2;
+    margin: 0 auto;
+
+    @media (min-width: @screen-md) {
+      width: 620px;
+      margin-bottom: 45px;
+
+      font-size: 18px;
+      line-height: 1.67;
+    }
+
+    @media (min-width: @screen-lg) {
+      display: inline-block;
+      width: 680px;
+      margin: 0;
+      margin-bottom: 45px;
+
+      vertical-align: top;
+    }
+  }
+
+  &__quotes {
+    @media (min-width: @screen-lg) {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      display: none;
+      width: 77px;
+      height: 63px;
+
+      transform: translateX(-50%);
+
+      @media (min-width: @screen-lg) {
+        display: block;
+
+        background: url(../img/quotes.svg);
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      display: block;
+    }
+
+    @media (min-width: @screen-lg) {
+      margin-bottom: 40px;
+      padding-top: 120px;
+    }
+  }
+
+  &__footer-heading {
+    order: 1;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.67;
+    color: @gray;
+
+    @media (min-width: @screen-md) {
+      margin-bottom: 10px;
+
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    @media (min-width: @screen-lg) {
+      font-size: 24px;
+      line-height: 1.25;
+    }
+  }
+
+  &__footer-description {
+    display: none;
+
+    @media (min-width: @screen-md) {
+      display: block;
+    }
+
+    @media (min-width: @screen-lg) {
+      font-size: 18px;
+      line-height: 1.67;
+    }
+  }
+
+  &__review-arrow-left {
+    display: none;
+
+    @media (min-width: @screen-lg) {
+      position: absolute;
+      top: 140px;
+      left: 10px;
+
+      display: block;
+      width: 21px;
+      height: 40px;
+
+      background: url(../img/review-arrow-left.svg);
+      cursor: pointer;
+    }
+  }
+
+  &__review-arrow-right {
+    display: none;
+
+    @media (min-width: @screen-lg) {
+      position: absolute;
+      top: 140px;
+      right: 10px;
+
+      display: block;
+      width: 21px;
+      height: 40px;
+
+      background: url(../img/review-arrow-right.svg);
+      cursor: pointer;
+    }
+  }
+}
