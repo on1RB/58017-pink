@@ -2,9 +2,12 @@
   position: relative;
 
   margin: 0 auto;
-  overflow: hidden;
 
   text-align: center;
+
+  // @media (min-width: @screen-md) {
+    overflow: hidden;
+  // }
 
   &:before {
     content: "";
@@ -14,7 +17,6 @@
 
     width: 700px;
     height: 460px;
-    overflow: hidden;
 
     transform: translateX(-50%);
 
@@ -57,6 +59,30 @@
       background: url(../img/background-fullsize.jpg);
       background-position: 50% 0;
       background-size: contain;
+    }
+  }
+
+  &--height {
+
+    @media (min-width: @screen-sm) {
+
+        &:before {
+        height: 240px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+
+      &:before {
+        height: 729px;
+      }
+    }
+
+    @media (min-width: @screen-lg) {
+
+      &:before {
+        height: 855px;
+      }
     }
   }
 
@@ -226,6 +252,7 @@
 
       @media (min-width: @screen-lg) {
         width: auto;
+        margin-top: 0;
         padding-top: 75px;
       }
     }

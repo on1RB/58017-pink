@@ -22,8 +22,6 @@ module.exports = function(grunt) {
       }
     },
 
-
-
     copy: {
       build: {
         files: [{
@@ -65,7 +63,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,gid,svg}"]
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
@@ -87,13 +85,36 @@ module.exports = function(grunt) {
 
     watch: {
       style: {
-        files: ['less/**/*.less'],
+        files: ['src/less/**/*.less'],
         tasks: ['less', 'postcss'],
         options: {
           spawn: false,
           livereload: true
-        }
-      }
+        },
+      },
+      images: {
+        files: ['src/img/**/.{png,jpg,gif,svg}'],
+        tasks: ['img'],
+        options: {
+          spawn: false,
+          livereload: true
+        },
+      },
+      scripts: {
+        files: ['src/js/*.js'],
+        // tasks: ['js'],
+        options: {
+          spawn: false,
+          livereload: true
+        },
+      },
+      html: {
+        files: ['src/*.html'],
+        options: {
+          spawn: false,
+          livereload: true
+        },
+      },
     },
 
     htmlmin: {
@@ -169,7 +190,7 @@ module.exports = function(grunt) {
     'cmq',
     'postcss',
     'cssmin',
-    'imagemin',
+    // 'imagemin',
     'htmlmin',
     'concat',
     'uglify'

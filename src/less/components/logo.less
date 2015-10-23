@@ -2,7 +2,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1;
+  z-index: 2;
 
   width: 74px;
   height: 23px;
@@ -19,20 +19,30 @@
     left: 10px;
   }
 
-  &__pink {
-    width: 74px;
-    height: 23px;
+  &__pink-mobile {
+    fill: @white;
 
-    @media (min-width: @screen-md) {
-      width: 145px;
-      height: 40px;
-
-      &:hover .pink {
-        fill: red;
-      }
+    &:hover {
+      fill: @pink;
     }
 
-    @media (min-width: @screen-sm) {
+    &:active {
+      fill: @white;
+      opacity: .3;
+    }
+
+    @media (min-width: @screen-md) {
+      display: none;
+    }
+  }
+
+  &__pink {
+    display: none;
+
+    @media (min-width: @screen-md) {
+      display: block;
+      fill: @white;
+
       .stars {
         opacity: 0;
       }
@@ -41,32 +51,38 @@
         opacity: 0;
       }
 
-      .glasses {
-        opacity: 0;
+      &:hover {
+        fill: @pink;
       }
 
-      .pink {
+      &:active {
         fill: white;
-      }
-    }
-
-    @media (min-width: @screen-md) {
-      .glasses {
-        opacity: 1;
+        opacity: .3;
       }
     }
 
     @media (min-width: @screen-lg) {
+
       .glasses {
         opacity: 0;
       }
 
-      .stars {
+      .glasses-star {
         opacity: 1;
       }
 
-      .glasses-star {
+      .stars {
         opacity: 1;
+        fill: @pink;
+      }
+
+      &:hover {
+        fill: @pink;
+      }
+
+      &:active {
+        fill: @white;
+        opacity: .3;
       }
     }
   }
