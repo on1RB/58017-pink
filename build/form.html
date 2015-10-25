@@ -49,7 +49,6 @@
         </a>
         <nav class="page-nav" role="navigation">
           <ul class="page-nav__list">
-            <li class="page-nav__item"></li>
             <li class="page-nav__item"><a href="#">Информация</a></li>
             <li class="page-nav__item"><a href="#">Блог</a></li>
             <li class="page-nav__item"><a href="#">Отзывы</a></li>
@@ -63,7 +62,7 @@
 
     <form class="main-form" action="/echo" method="post" role="main">
       <fieldset class="main-form__fieldset main-form__fieldset--user-data">
-        <p class="main-form__text main-form__text--color">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<span class="main-form__fill-form">Пожалуйста заполните форму ниже:</span></p>
+        <p class="main-form__text main-form__text--color">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span class="main-form__fill-form">Пожалуйста заполните форму ниже:</span></p>
         <div class="field-text">
           <label class="field-text__name">Имя: *</label>
           <input class="field-text__input" type="text" name="" placeholder="Введите ваш имя" required>
@@ -103,7 +102,7 @@
           </label>
           <label class="field-text field-text--counter">
             <span class="field-text__minus"></span>
-            <input class="field-text__travel" id="countTravelDays" type="text" name="">
+            <input class="field-text__travel" id="countTravelDays" type="text" name="" value="10 дней">
             <span class="field-text__plus"></span>
             <span class="field-text__name field-text__name--text-center">Продолжительность</span>
           </label>
@@ -122,23 +121,23 @@
         </label>
         <ul class="main-form__counter">
           <li class="main-form__counter--number">
-            <div class="field-text field-text--width-input">
+            <div class="field-text field-text--width-300-input">
               <label class="field-text__name">Имя: *</label>
               <input class="field-text__input" type="text" name="" placeholder="Введите ваше имя" required>
             </div>
             <span class="field-text__delete">Удалить</span>
-            <div class="field-text field-text--width-input">
+            <div class="field-text field-text--width-300-input">
               <label class="field-text__name">Прозвище:</label>
               <input class="field-text__input" type="text" name="" placeholder="Ну как же без этого!">
             </div>
           </li>
           <li class="main-form__counter--number">
-            <div class="field-text field-text--width-input">
+            <div class="field-text field-text--width-300-input">
               <label class="field-text__name">Имя: *</label>
               <input class="field-text__input" type="text" name="" placeholder="Введите ваше имя" required>
             </div>
             <span class="field-text__delete">Удалить</span>
-            <div class="field-text field-text--width-input">
+            <div class="field-text field-text--width-300-input">
               <label class="field-text__name">Прозвище:</label>
               <input class="field-text__input" type="text" name="" placeholder="Ну как же без этого!">
             </div>
@@ -146,7 +145,7 @@
         </ul>
       </fieldset>
       <fieldset class="main-form__fieldset main-form__fieldset--border main-form__fieldset--padding-top-50">
-        <p class="main-form__text main-form__text--pos  main-form__text--width-440">Ваши безбашенные достижения в путешествии</p>
+        <p class="main-form__text main-form__text--pos main-form__text--width-440">Ваши безбашенные достижения в путешествии</p>
         <div class="main-form__container main-form__container--checkbox">
           <label class="field-checkbox field-checkbox--order-1">
             <input type="checkbox" name="" checked>
@@ -186,7 +185,7 @@
       </fieldset>
       <fieldset class="main-form__submit">
         <button class="btn" type="submit">Отправить форму</button>
-        <span class="btn__text"><span class="btn__star">*</span> - Обязательные <span class="btn__text-hidden">для заполнения</span> поля</span>
+        <span class="main-form__sub-submit-text"><span class="main-form__star">*</span> - Обязательные <span class="main-form__text-hidden">для заполнения</span> поля</span>
       </fieldset>
     </form>
 
@@ -239,9 +238,7 @@
       <span class="main-form__photo-remove-link" title="Удалить"></span>
     </script>
 
-    <script src="js/mustache.min.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

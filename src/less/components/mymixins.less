@@ -13,14 +13,7 @@
   }
 }
 
-.tablet(@rules) {
-  @media screen and (min-width: @screen-md) {
-    @rules();
-  }
-}
-
-.desktop(@rules) {
-  @media screen and (min-width: @screen-lg) {
-    @rules();
-  }
+.text-hidden() {
+  font: 0/0 a;
+  color: transparent;
 }

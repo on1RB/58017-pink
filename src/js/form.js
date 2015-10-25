@@ -11,6 +11,9 @@
   var PEOPLE_MAX = 10;
 
   var form = document.querySelector(".main-form");
+  if (!form) {
+    return;
+  }
   var area = form.querySelector(".main-form__photos-list");
   var template = document.querySelector("#image-template").innerHTML;
   var queue = [];
@@ -111,6 +114,9 @@
   });
 
   function validateValue(input) {
+    if (isNaN(input.value)) {
+      return 1 + input.dataset.endline;
+    }
     return Math.min(Math.max(parseInt(input.value), +input.dataset.min), +input.dataset.max) + input.dataset.endline;
   }
 

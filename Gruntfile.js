@@ -29,12 +29,32 @@ module.exports = function(grunt) {
           cwd: "src",
           src: [
             "img/**",
-            "js/**",
+            // "js/**",
             "*.html"
           ],
           dest: "build"
         }]
-      }
+      },
+      // html: {
+      //   files: [{
+      //     expand: true,
+      //     cwd: "src",
+      //     src: [
+      //       "*.html"
+      //     ],
+      //     dest: "build"
+      //   }]
+      // },
+      // js: {
+      //   files: [{
+      //     expand: true,
+      //     cwd: "src",
+      //     src: [
+      //       "src/js/*.js"
+      //     ],
+      //     dest: "build"
+      //   }]
+      // },
     },
 
     cssmin: {
@@ -102,7 +122,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['src/js/*.js'],
-        // tasks: ['js'],
+        tasks: ['copy:js'],
         options: {
           spawn: false,
           livereload: true
@@ -110,6 +130,7 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['src/*.html'],
+        tasks: ['copy:html'],
         options: {
           spawn: false,
           livereload: true
@@ -128,7 +149,9 @@ module.exports = function(grunt) {
       html: {
         files: {
           "build/index.min.html": "build/index.html",
-          "build/form.min.html": "build/form.html"
+          "build/form.min.html": "build/form.html",
+          "build/blog.min.html": "build/blog.html",
+          "build/post.min.html": "build/post.html"
         }
       }
     },
@@ -136,9 +159,23 @@ module.exports = function(grunt) {
     concat: {
       start: {
         src: [
-          'src/js/script.js'
+          'src/js/toggler.js',
+          'src/js/map.js',
+          'src/js/form.js',
+          'src/js/mustache.min.js'
+          // 'src/js/pagination.js'
         ],
-        dest: 'build/js/script.min.js'
+        dest: 'build/js/script.js'
+      }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions'],
+        map: true,
+      },
+      style: {
+        src: 'build/css/style.css'
       }
     },
 
@@ -146,7 +183,7 @@ module.exports = function(grunt) {
     uglify: {
       start: {
         files: {
-          'build/js/script.min.js': ['build/js/script.min.js']
+          'build/js/script.min.js': ['build/js/script.js']
         }
       }
     },
@@ -187,10 +224,11 @@ module.exports = function(grunt) {
     'clean',
     'copy',
     'less',
+    'autoprefixer',
     'cmq',
     'postcss',
     'cssmin',
-    // 'imagemin',
+    'imagemin',
     'htmlmin',
     'concat',
     'uglify'
