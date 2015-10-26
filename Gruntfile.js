@@ -228,7 +228,7 @@ module.exports = function(grunt) {
     'cmq',
     'postcss',
     'cssmin',
-    'imagemin',
+    // 'imagemin',
     'htmlmin',
     'concat',
     'uglify'
