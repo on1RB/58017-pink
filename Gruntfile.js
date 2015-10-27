@@ -225,7 +225,7 @@ module.exports = function(grunt) {
     'copy',
     'less',
     'autoprefixer',
-    'cmq',
+    // 'cmq',
     'postcss',
     'cssmin',
     // 'imagemin',
